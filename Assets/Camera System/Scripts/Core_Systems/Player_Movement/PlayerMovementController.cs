@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerMovementController : MonoBehaviour {
 
 	// === constants ===
-	private const float DEAD_ZONE = 0.15f;
+	private const float DEAD_ZONE = 0.1f;
 
 	// === inspector vars ===
 	public float speed;
