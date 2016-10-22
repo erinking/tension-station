@@ -20,6 +20,7 @@ public class PlayerMovementController : MonoBehaviour {
 	private Vector2 inputVec;
 	private Vector3 velocity;
 	private bool canSprint = true;
+	private Animator playerAnimator;
 
 	// === main functions ===
 	void Start () {
@@ -27,6 +28,7 @@ public class PlayerMovementController : MonoBehaviour {
 		inputVec = new Vector2();
 		velocity = new Vector3();
 		StartCoroutine(DelayedInit());
+		playerAnimator = GetComponent<Animator> ();
 	}
 
 	private IEnumerator DelayedInit(){
@@ -53,6 +55,9 @@ public class PlayerMovementController : MonoBehaviour {
 		velocity.y = 0f;
 		//and finally, normalize and set to our defined speed
 		velocity = velocity.normalized * speed;
+
+		//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
+		playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
 
 		if (PlayerInput.GetButtonDown("Sprint") && canSprint){
 			velocity *= runMultiplier;
