@@ -22,6 +22,13 @@ public class PlayerMovementController : MonoBehaviour {
 	private Vector3 velocity;
 	private bool canSprint = true;
 	private Animator playerAnimator;
+	public enum state {WALKING, AUTO, GUILOCK, FALLING};
+	public state curState;
+	private float fallSpeed = 0f;
+	private float targetHeight;
+	private RaycastHit hitInfo;
+	private Ray toFloor;
+
 
 	// === main functions ===
 	void Start () {
@@ -30,6 +37,11 @@ public class PlayerMovementController : MonoBehaviour {
 		velocity = new Vector3();
 		StartCoroutine(DelayedInit());
 		playerAnimator = GetComponent<Animator> ();
+
+		toFloor = new Ray (transform.position, -1 * transform.up);
+		Physics.Raycast (toFloor, out hitInfo);
+		targetHeight = hitInfo.distance;
+		curState = state.WALKING;
 	}
 
 	private IEnumerator DelayedInit(){
@@ -39,54 +51,99 @@ public class PlayerMovementController : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (GameStatics.LevelManager.busyLoading) return;
-		if (useController)
-		{
+
+		// controller logic
+		if (useController) {
 			inputVec.x = PlayerInput.GetAxis ("HorizontalController");
 			inputVec.y = PlayerInput.GetAxis ("VerticalController");
-			if (inputVec.magnitude < DEAD_ZONE)
-			{
+
+			// scaled radial dead zone
+			if (inputVec.magnitude < DEAD_ZONE) {
 				inputVec = Vector2.zero;
-			} 
-			else
-			{
+			} else {
 				inputVec = inputVec.normalized * ((inputVec.magnitude - DEAD_ZONE) / (1 - DEAD_ZONE));
 			}
-		} 
-		else
-		{
+		} else {
 			inputVec.x = PlayerInput.GetAxis ("Horizontal");
 			inputVec.y = PlayerInput.GetAxis ("Vertical");
 		}
-		if (inputVec.magnitude <= DEAD_ZONE)
-		{
+
+		if (inputVec.magnitude <= DEAD_ZONE) {
 			inputVec.x = 0f;
 			inputVec.y = 0f;
-			if (curMoveSpaceCameraTransform != CameraManager.Get ().main.transform)
-			{
+			if (curMoveSpaceCameraTransform != CameraManager.Get ().main.transform) {
 				curMoveSpaceCameraTransform = CameraManager.Get ().main.transform;
 			}
 		}
 		velocity.x = inputVec.x;
 		velocity.z = inputVec.y;
 		//now convert this to camera space for the camera we are currently using (which is reset when we stop pressing things)
-		velocity = curMoveSpaceCameraTransform.TransformDirection(velocity);
-		//and project it onto the x-z plane (the dot product is with [1,0,1], so we can just set y to zero
-		velocity.y = 0f;
-		//and finally, normalize and set to our defined speed
-		velocity = useController ? velocity * speed : velocity.normalized * speed;
+		velocity = curMoveSpaceCameraTransform.TransformDirection (velocity);
 
-		//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
-		playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
+		switch (curState) 
+		{
+		case state.WALKING:
+			//project it onto the x-z plane (the dot product is with [1,0,1], so we can just set y to zero
+			velocity.y = 0f;
+			//and finally, normalize and set to our defined speed
+			velocity = useController ? velocity * speed : velocity.normalized * speed;
 
-		if (PlayerInput.GetButtonDown("Sprint") && canSprint){
-			velocity *= runMultiplier;
-			curSprint -= Time.fixedDeltaTime;
-			if (curSprint <= 0f){
-				StartCoroutine(SprintRecovery());
+			//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
+			playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
+
+			if (PlayerInput.GetButtonDown ("Sprint") && canSprint) {
+				velocity *= runMultiplier;
+				curSprint -= Time.fixedDeltaTime;
+				if (curSprint <= 0f) {
+					StartCoroutine (SprintRecovery ());
+				}
+			} else {
+				curSprint = Mathf.Min (curSprint + Time.fixedDeltaTime * sprintRecoveryMultiplier, maxSprintDuration);
 			}
-		} else {
-			curSprint = Mathf.Min(curSprint + Time.fixedDeltaTime*sprintRecoveryMultiplier, maxSprintDuration);
+
+			fallSpeed = 0f;
+
+			toFloor.origin = transform.position;
+			toFloor.direction = -1 * transform.up;
+
+			if (Physics.Raycast (toFloor, out hitInfo)) 
+			{
+				if (!hitInfo.collider.isTrigger) 
+				{
+					if (Mathf.Abs (hitInfo.distance - targetHeight) < .5) 
+					{
+						transform.position = new Vector3 (transform.position.x, hitInfo.point.y + targetHeight, transform.position.z);
+					} 
+					else
+					{
+						curState = state.FALLING;
+					}
+				}
+			}
+			else 
+			{
+				curState = state.FALLING;
+			}
+			break;
+		case state.FALLING:
+			fallSpeed -= 9.8f*Time.deltaTime;
+			velocity.y = fallSpeed/speed;
+
+			toFloor.origin = transform.position;
+			toFloor.direction = -1 * transform.up;
+			if (Physics.Raycast (toFloor, out hitInfo)) 
+			{
+				if (!hitInfo.collider.isTrigger) 
+				{
+					if(Mathf.Abs (hitInfo.distance - targetHeight) < .15) 
+					{
+						curState = state.WALKING;
+					}
+				}
+			} 
+			break;
 		}
+
 
 		//and finally, set our velocity
 		rb.velocity = velocity;
