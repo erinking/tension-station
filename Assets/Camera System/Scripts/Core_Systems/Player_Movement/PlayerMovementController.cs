@@ -4,13 +4,14 @@ using System.Collections;
 public class PlayerMovementController : MonoBehaviour {
 
 	// === constants ===
-	private const float DEAD_ZONE = 0.1f;
+	private const float DEAD_ZONE = 0.25f;
 
 	// === inspector vars ===
 	public float speed;
 	public float runMultiplier;
 	public float maxSprintDuration;
 	public float sprintRecoveryMultiplier;
+	public bool useController;
 
 	// === internal vars ===
 	private Rigidbody rb;
@@ -38,13 +39,31 @@ public class PlayerMovementController : MonoBehaviour {
 
 	void FixedUpdate () {
 		if (GameStatics.LevelManager.busyLoading) return;
-		inputVec.x = PlayerInput.GetAxis("Horizontal");
-		inputVec.y = PlayerInput.GetAxis("Vertical");
-		if (inputVec.sqrMagnitude <= DEAD_ZONE*DEAD_ZONE){
+		if (useController)
+		{
+			inputVec.x = PlayerInput.GetAxis ("HorizontalController");
+			inputVec.y = PlayerInput.GetAxis ("VerticalController");
+			if (inputVec.magnitude < DEAD_ZONE)
+			{
+				inputVec = Vector2.zero;
+			} 
+			else
+			{
+				inputVec = inputVec.normalized * ((inputVec.magnitude - DEAD_ZONE) / (1 - DEAD_ZONE));
+			}
+		} 
+		else
+		{
+			inputVec.x = PlayerInput.GetAxis ("Horizontal");
+			inputVec.y = PlayerInput.GetAxis ("Vertical");
+		}
+		if (inputVec.magnitude <= DEAD_ZONE)
+		{
 			inputVec.x = 0f;
 			inputVec.y = 0f;
-			if (curMoveSpaceCameraTransform != CameraManager.Get().main.transform){
-				curMoveSpaceCameraTransform = CameraManager.Get().main.transform;
+			if (curMoveSpaceCameraTransform != CameraManager.Get ().main.transform)
+			{
+				curMoveSpaceCameraTransform = CameraManager.Get ().main.transform;
 			}
 		}
 		velocity.x = inputVec.x;
@@ -54,7 +73,7 @@ public class PlayerMovementController : MonoBehaviour {
 		//and project it onto the x-z plane (the dot product is with [1,0,1], so we can just set y to zero
 		velocity.y = 0f;
 		//and finally, normalize and set to our defined speed
-		velocity = velocity.normalized * speed;
+		velocity = useController ? velocity * speed : velocity.normalized * speed;
 
 		//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
 		playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);

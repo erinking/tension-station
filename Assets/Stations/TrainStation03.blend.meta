@@ -12,6 +12,11 @@ ModelImporter:
     100008: Empty_001
     100010: Empty_002
     100012: //RootNode
+    100014: Cube_000
+    100016: Cube_002
+    100018: Cube_003
+    100020: Cube_004
+    100022: Cube_005
     400000: Circle
     400002: Circle_001
     400004: Cube_001
@@ -19,15 +24,35 @@ ModelImporter:
     400008: Empty_001
     400010: Empty_002
     400012: //RootNode
+    400014: Cube_000
+    400016: Cube_002
+    400018: Cube_003
+    400020: Cube_004
+    400022: Cube_005
     2300000: Circle
     2300002: Circle_001
     2300004: Cube_001
+    2300006: Cube_000
+    2300008: Cube_002
+    2300010: Cube_003
+    2300012: Cube_004
+    2300014: Cube_005
     3300000: Circle
     3300002: Circle_001
     3300004: Cube_001
+    3300006: Cube_000
+    3300008: Cube_002
+    3300010: Cube_003
+    3300012: Cube_004
+    3300014: Cube_005
     4300000: Circle_001
     4300002: Cube_001
     4300004: Circle
+    4300006: Cube_003
+    4300008: Cube_005
+    4300010: Cube_004
+    4300012: Cube_002
+    4300014: Cube_000
     7400000: Default Take
     9500000: //RootNode
   materials:
