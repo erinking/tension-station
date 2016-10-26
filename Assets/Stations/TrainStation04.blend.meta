@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 4996f5e2ec0554f5fafce19338e21b6b
+timeCreated: 1477507896
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Columns_Walls
+    100002: Cube_000
+    100004: Cube_005
+    100006: Empty
+    100008: Empty_001
+    100010: Floors
+    100012: Lower_Hand_Rails
+    100014: Lower_Hand_Rails_001
+    100016: Lower_Stair_Columns
+    100018: Rotunda
+    100020: Stair_Ramp
+    100022: //RootNode
+    100024: Upper_Hand_Rails
+    100026: Upper_Hand_Rails_001
+    100028: Upper_Stair_Columns
+    400000: Columns_Walls
+    400002: Cube_000
+    400004: Cube_005
+    400006: Empty
+    400008: Empty_001
+    400010: Floors
+    400012: Lower_Hand_Rails
+    400014: Lower_Hand_Rails_001
+    400016: Lower_Stair_Columns
+    400018: Rotunda
+    400020: Stair_Ramp
+    400022: //RootNode
+    400024: Upper_Hand_Rails
+    400026: Upper_Hand_Rails_001
+    400028: Upper_Stair_Columns
+    2300000: Columns_Walls
+    2300002: Cube_000
+    2300004: Cube_005
+    2300006: Floors
+    2300008: Lower_Hand_Rails
+    2300010: Lower_Hand_Rails_001
+    2300012: Lower_Stair_Columns
+    2300014: Rotunda
+    2300016: Stair_Ramp
+    2300018: Upper_Hand_Rails
+    2300020: Upper_Hand_Rails_001
+    2300022: Upper_Stair_Columns
+    3300000: Columns_Walls
+    3300002: Cube_000
+    3300004: Cube_005
+    3300006: Floors
+    3300008: Lower_Hand_Rails
+    3300010: Lower_Hand_Rails_001
+    3300012: Lower_Stair_Columns
+    3300014: Rotunda
+    3300016: Stair_Ramp
+    3300018: Upper_Hand_Rails
+    3300020: Upper_Hand_Rails_001
+    3300022: Upper_Stair_Columns
+    4300000: Upper_Hand_Rails_001
+    4300002: Cube_000
+    4300004: Lower_Hand_Rails_001
+    4300006: Stair_Ramp
+    4300008: Lower_Hand_Rails
+    4300010: Cube_005
+    4300012: Lower_Stair_Columns
+    4300014: Rotunda
+    4300016: Upper_Stair_Columns
+    4300018: Floors
+    4300020: Upper_Hand_Rails
+    4300022: Columns_Walls
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
