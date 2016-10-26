@@ -17,6 +17,20 @@ ModelImporter:
     100018: Cube_003
     100020: Cube_004
     100022: Cube_005
+    100024: Columns_Walls
+    100026: Floors
+    100028: Lower_Hand_Rails
+    100030: Lower_Hand_Rails_001
+    100032: Lower_Stair_Columns
+    100034: Rotunda
+    100036: Stair_Ramp
+    100038: Upper_Hand_Rails
+    100040: Upper_Hand_Rails_001
+    100042: Upper_Stair_Columns
+    100044: Big_Window
+    100046: Big_Window_001
+    100048: Side_Windows
+    100050: Side_Windows_001
     400000: Circle
     400002: Circle_001
     400004: Cube_001
@@ -29,6 +43,20 @@ ModelImporter:
     400018: Cube_003
     400020: Cube_004
     400022: Cube_005
+    400024: Columns_Walls
+    400026: Floors
+    400028: Lower_Hand_Rails
+    400030: Lower_Hand_Rails_001
+    400032: Lower_Stair_Columns
+    400034: Rotunda
+    400036: Stair_Ramp
+    400038: Upper_Hand_Rails
+    400040: Upper_Hand_Rails_001
+    400042: Upper_Stair_Columns
+    400044: Big_Window
+    400046: Big_Window_001
+    400048: Side_Windows
+    400050: Side_Windows_001
     2300000: Circle
     2300002: Circle_001
     2300004: Cube_001
@@ -37,6 +65,20 @@ ModelImporter:
     2300010: Cube_003
     2300012: Cube_004
     2300014: Cube_005
+    2300016: Columns_Walls
+    2300018: Floors
+    2300020: Lower_Hand_Rails
+    2300022: Lower_Hand_Rails_001
+    2300024: Lower_Stair_Columns
+    2300026: Rotunda
+    2300028: Stair_Ramp
+    2300030: Upper_Hand_Rails
+    2300032: Upper_Hand_Rails_001
+    2300034: Upper_Stair_Columns
+    2300036: Big_Window
+    2300038: Big_Window_001
+    2300040: Side_Windows
+    2300042: Side_Windows_001
     3300000: Circle
     3300002: Circle_001
     3300004: Cube_001
@@ -45,6 +87,20 @@ ModelImporter:
     3300010: Cube_003
     3300012: Cube_004
     3300014: Cube_005
+    3300016: Columns_Walls
+    3300018: Floors
+    3300020: Lower_Hand_Rails
+    3300022: Lower_Hand_Rails_001
+    3300024: Lower_Stair_Columns
+    3300026: Rotunda
+    3300028: Stair_Ramp
+    3300030: Upper_Hand_Rails
+    3300032: Upper_Hand_Rails_001
+    3300034: Upper_Stair_Columns
+    3300036: Big_Window
+    3300038: Big_Window_001
+    3300040: Side_Windows
+    3300042: Side_Windows_001
     4300000: Circle_001
     4300002: Cube_001
     4300004: Circle
@@ -53,6 +109,20 @@ ModelImporter:
     4300010: Cube_004
     4300012: Cube_002
     4300014: Cube_000
+    4300016: Upper_Hand_Rails_001
+    4300018: Lower_Hand_Rails_001
+    4300020: Stair_Ramp
+    4300022: Lower_Hand_Rails
+    4300024: Lower_Stair_Columns
+    4300026: Rotunda
+    4300028: Upper_Stair_Columns
+    4300030: Floors
+    4300032: Upper_Hand_Rails
+    4300034: Columns_Walls
+    4300036: Big_Window_001
+    4300038: Big_Window
+    4300040: Side_Windows_001
+    4300042: Side_Windows
     7400000: Default Take
     9500000: //RootNode
   materials:
