@@ -38,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour {
 		StartCoroutine(DelayedInit());
 		playerAnimator = GetComponent<Animator> ();
 
-		toFloor = new Ray (transform.position + Vector3.up, -1 * transform.up);
+		toFloor = new Ray (transform.position + Vector3.up, -1 * Vector3.up);
 		Physics.Raycast (toFloor, out hitInfo);
 		targetHeight = hitInfo.distance;
 		curState = state.WALKING;
@@ -108,9 +108,6 @@ public class PlayerMovementController : MonoBehaviour {
 			fallSpeed = 0f;
 
 			toFloor.origin = transform.position + Vector3.up;
-			toFloor.direction = -1 * transform.up;
-
-			Debug.DrawRay (toFloor.origin, toFloor.direction, Color.red);
 
 			if (Physics.Raycast (toFloor, out hitInfo)) 
 			{
@@ -136,7 +133,7 @@ public class PlayerMovementController : MonoBehaviour {
 			velocity.y = fallSpeed/speed;
 
 			toFloor.origin = transform.position + Vector3.up;
-			toFloor.direction = -1 * transform.up;
+
 			if (Physics.Raycast (toFloor, out hitInfo)) 
 			{
 				if (!hitInfo.collider.isTrigger) 
