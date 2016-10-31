@@ -38,7 +38,7 @@ public class PlayerMovementController : MonoBehaviour {
 		StartCoroutine(DelayedInit());
 		playerAnimator = GetComponent<Animator> ();
 
-		toFloor = new Ray (transform.position, -1 * transform.up);
+		toFloor = new Ray (transform.position + Vector3.up, -1 * transform.up);
 		Physics.Raycast (toFloor, out hitInfo);
 		targetHeight = hitInfo.distance;
 		curState = state.WALKING;
@@ -91,28 +91,34 @@ public class PlayerMovementController : MonoBehaviour {
 			//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
 			playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
 
-			if (PlayerInput.GetButtonDown ("Sprint") && canSprint) {
+			if (PlayerInput.GetButtonDown ("Sprint") && canSprint) 
+			{
 				velocity *= runMultiplier;
 				curSprint -= Time.fixedDeltaTime;
-				if (curSprint <= 0f) {
+				if (curSprint <= 0f) 
+				{
 					StartCoroutine (SprintRecovery ());
 				}
-			} else {
+			} 
+			else 
+			{
 				curSprint = Mathf.Min (curSprint + Time.fixedDeltaTime * sprintRecoveryMultiplier, maxSprintDuration);
 			}
 
 			fallSpeed = 0f;
 
-			toFloor.origin = transform.position;
+			toFloor.origin = transform.position + Vector3.up;
 			toFloor.direction = -1 * transform.up;
+
+			Debug.DrawRay (toFloor.origin, toFloor.direction, Color.red);
 
 			if (Physics.Raycast (toFloor, out hitInfo)) 
 			{
-				if (!hitInfo.collider.isTrigger) 
+				if (!hitInfo.collider.isTrigger && !hitInfo.collider.gameObject.tag.Equals("Player")) 
 				{
 					if (Mathf.Abs (hitInfo.distance - targetHeight) < .5) 
 					{
-						transform.position = new Vector3 (transform.position.x, hitInfo.point.y + targetHeight, transform.position.z);
+						transform.position = new Vector3 (transform.position.x, hitInfo.point.y + targetHeight - 1, transform.position.z);
 					} 
 					else
 					{
@@ -129,7 +135,7 @@ public class PlayerMovementController : MonoBehaviour {
 			fallSpeed -= 9.8f*Time.deltaTime;
 			velocity.y = fallSpeed/speed;
 
-			toFloor.origin = transform.position;
+			toFloor.origin = transform.position + Vector3.up;
 			toFloor.direction = -1 * transform.up;
 			if (Physics.Raycast (toFloor, out hitInfo)) 
 			{
