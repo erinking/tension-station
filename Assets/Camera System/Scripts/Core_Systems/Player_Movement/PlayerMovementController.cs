@@ -28,6 +28,7 @@ public class PlayerMovementController : MonoBehaviour {
 	private float targetHeight;
 	private RaycastHit hitInfo;
 	private Ray toFloor;
+	private AudioSource walkingSound;
 
 
 	// === main functions ===
@@ -42,6 +43,7 @@ public class PlayerMovementController : MonoBehaviour {
 		Physics.Raycast (toFloor, out hitInfo);
 		targetHeight = hitInfo.distance;
 		curState = state.WALKING;
+		walkingSound = GetComponent<AudioSource> ();
 	}
 
 	private IEnumerator DelayedInit(){
@@ -66,6 +68,13 @@ public class PlayerMovementController : MonoBehaviour {
 		} else {
 			inputVec.x = PlayerInput.GetAxis ("Horizontal");
 			inputVec.y = PlayerInput.GetAxis ("Vertical");
+		}
+
+		//Footstep sound logic
+		if (inputVec.sqrMagnitude>0 && !walkingSound.isPlaying) {
+			walkingSound.Play ();
+		}else if (inputVec.sqrMagnitude==0 && walkingSound.isPlaying) {
+			walkingSound.Stop ();
 		}
 
 		if (inputVec.magnitude <= DEAD_ZONE) {
