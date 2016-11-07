@@ -21,7 +21,7 @@ GameObject:
   - 4: {fileID: 4000011328327628}
   - 120: {fileID: 120000010416663080}
   - 114: {fileID: 114000011515897264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tendril
   m_TagString: Untagged
   m_Icon: {fileID: 0}

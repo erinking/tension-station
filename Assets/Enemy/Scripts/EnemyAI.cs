@@ -62,7 +62,6 @@ public class EnemyAI : MonoBehaviour {
 
 	void Patrol()
 	{
-		Debug.Log (waypointIndex);
 		nav.speed = walkSpeed;
 		if (nav.destination == enemyVision.resetLoc || nav.remainingDistance < nav.stoppingDistance)
 		{

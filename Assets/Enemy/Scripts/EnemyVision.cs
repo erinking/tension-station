@@ -35,8 +35,9 @@ public class EnemyVision : MonoBehaviour {
 			RaycastHit hitInfo;
 			float visibleDistance = playerMov.flashlight.enabled ? visionVolume.radius : visionVolume.radius / 5.0f;
 
-			if (Physics.Raycast (transform.position, dir, out hitInfo, visibleDistance)) 
+			if (Physics.Raycast (transform.position + Vector3.up, dir, out hitInfo, visibleDistance)) 
 			{
+				Debug.Log (hitInfo.collider.gameObject.tag);
 				if (hitInfo.collider.gameObject == player) 
 				{
 					canSeePlayer = true;
