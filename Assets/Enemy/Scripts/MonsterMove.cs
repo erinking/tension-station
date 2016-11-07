@@ -28,9 +28,12 @@ public class MonsterMove : MonoBehaviour {
 		if (groundPlane.Raycast(ray, out rayDistance))
 			targetPosition = ray.GetPoint(rayDistance);
 		targetObj.position = targetPosition;*/
+
+		/*
 		if (lantern.enabled) {
 			targetPosition = targetObj.position - groundPlane.normal * groundPlane.GetDistanceToPoint (targetObj.position);
 		}
 		transform.position = Vector3.MoveTowards (transform.position, targetPosition, Time.deltaTime * (Tendril.GetRand(transform.position,0.5f,100).magnitude + 0.4f) * speed);
+		*/
 	}
 }

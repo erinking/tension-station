@@ -21,6 +21,7 @@ public class PlayerMovementController : MonoBehaviour {
 	private Vector2 inputVec;
 	private Vector3 velocity;
 	private bool canSprint = true;
+	public Light flashlight;
 	private Animator playerAnimator;
 	public enum state {WALKING, AUTO, GUILOCK, FALLING};
 	public state curState;
@@ -38,6 +39,7 @@ public class PlayerMovementController : MonoBehaviour {
 		velocity = new Vector3();
 		StartCoroutine(DelayedInit());
 		playerAnimator = GetComponent<Animator> ();
+		flashlight = GetComponentInChildren<Light> ();
 
 		toFloor = new Ray (transform.position + Vector3.up, -1 * Vector3.up);
 		Physics.Raycast (toFloor, out hitInfo);
@@ -169,7 +171,7 @@ public class PlayerMovementController : MonoBehaviour {
 
 		if (PlayerInput.GetButtonDown ("LightToggle")) 
 		{
-			GetComponentInChildren<Light> ().enabled = !GetComponentInChildren<Light> ().enabled;
+			flashlight.enabled = !flashlight.enabled;
 		}
 	}
 
