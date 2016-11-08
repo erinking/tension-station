@@ -531,82 +531,11 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300014, guid: 4996f5e2ec0554f5fafce19338e21b6b, type: 3}
---- !u!1 &647092860 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000014259685910, guid: cec25c5ece32b4d7cb3757518b997fe9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1711096851}
 --- !u!4 &647092862 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012815563408, guid: cec25c5ece32b4d7cb3757518b997fe9,
     type: 2}
   m_PrefabInternal: {fileID: 1711096851}
---- !u!114 &647092863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 647092860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31d3b2e9724b79b49b8799034d59ce23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canSeePlayer: 0
-  lastSightingLoc: {x: 0, y: 0, z: 0}
-  resetLoc: {x: 0, y: 0, z: 0}
---- !u!114 &647092864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 647092860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88b19f1a7252bf43a9801f4ff1b22ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  walkSpeed: 2
-  chaseSpeed: 3
-  chaseTimeout: 1
-  patrolWaitTimes:
-  - 2
-  - 2
-  waypoints:
-  - {fileID: 1333834689}
-  - {fileID: 1067134944}
---- !u!195 &647092865
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 647092860}
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 1
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!135 &647092866
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 647092860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &669848601
 Prefab:
   m_ObjectHideFlags: 0
@@ -2466,10 +2395,16 @@ Prefab:
       propertyPath: m_Name
       value: Stairbase Monster
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014259685910, guid: cec25c5ece32b4d7cb3757518b997fe9, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 114000013060077768, guid: cec25c5ece32b4d7cb3757518b997fe9,
+        type: 2}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1333834689}
+    - target: {fileID: 114000013060077768, guid: cec25c5ece32b4d7cb3757518b997fe9,
+        type: 2}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1067134944}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cec25c5ece32b4d7cb3757518b997fe9, type: 2}
   m_IsPrefabParent: 0
