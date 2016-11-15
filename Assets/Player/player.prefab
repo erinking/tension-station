@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013485183028}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011909096824}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: testa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012887993156}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: piede_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011557764786}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: collo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013150782790}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: avampiede_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012737501554}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013450736418}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: gamba_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010853999260}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: polpaccio_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - 4: {fileID: 4000014089295172}
   - 108: {fileID: 108000010370460438}
   - 114: {fileID: 114000010479001756}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: lantern light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013736597142}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: addome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012613393864}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: piede_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010305467392}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: avampiede_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013323613960}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bicipite_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,8 @@ GameObject:
   - 114: {fileID: 114000010808284776}
   - 114: {fileID: 114000011424036624}
   - 114: {fileID: 114000010027873914}
-  m_Layer: 2
+  - 82: {fileID: 82000011982484528}
+  m_Layer: 0
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -237,7 +238,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014173024840}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: mano_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013418578766}
   - 137: {fileID: 137000013444319930}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: donna_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +269,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011583384284}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: mano_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +284,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011970129026}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: polpaccio_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +299,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010709485918}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bicipite_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +314,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013276454540}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: avambraccio_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +329,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014166796368}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bacino
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +345,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012708577096}
   - 137: {fileID: 137000012224037280}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: donna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +360,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013295292112}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: avambraccio_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +375,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010409547482}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: schiena
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +390,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011438276718}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: gamba_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,10 +708,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012630853492}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -44.81, y: -0.094, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -47.5, y: -0.113, z: 25}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children:
   - {fileID: 4000012708577096}
   - {fileID: 4000012737501554}
@@ -760,6 +761,80 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!82 &82000011982484528
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012630853492}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e739a29a9bcb14ed7a387b7cf0a600d9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
+  m_Pitch: 1.12
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.9
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95000011787086868
 Animator:
   serializedVersion: 3
@@ -787,7 +862,7 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.93333334, g: 0.7797003, b: 0.50493336, a: 1}
-  m_Intensity: 2.0012162
+  m_Intensity: 1
   m_Range: 19.149649
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -864,12 +939,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c438d151e03b92498f20174bbfa4676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 3
   runMultiplier: 1.5
   maxSprintDuration: 10
   sprintRecoveryMultiplier: 3
   useController: 0
   curMoveSpaceCameraTransform: {fileID: 0}
+  flashlight: {fileID: 0}
   curState: 0
 --- !u!136 &136000013633059738
 CapsuleCollider:
@@ -879,11 +955,11 @@ CapsuleCollider:
   m_GameObject: {fileID: 1000012630853492}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.4
-  m_Height: 1.5
+  m_Height: 1.3
   m_Direction: 1
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!137 &137000012224037280
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
