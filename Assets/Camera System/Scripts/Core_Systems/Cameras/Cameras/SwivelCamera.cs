@@ -25,7 +25,7 @@ public class SwivelCamera : SiphonCamera {
 			return;
 		}
 
-		lookRot = target.transform.position - transform.position;
+		lookRot = (target.transform.position + Vector3.up) - transform.position;
 		Quaternion goalRot = Quaternion.LookRotation(lookRot, Vector3.up);
 		transform.rotation = Quaternion.Slerp(transform.rotation, goalRot, .5f);
 		if (!rotateHorizontal){
