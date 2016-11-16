@@ -18,11 +18,11 @@ public class Tendril : MonoBehaviour {
 	private Vector3 startAngle;
 	private int seed;
 	private int pointcount;
-	private Vector3 upVector = Vector3.up;
 	private Vector3 xVector;
 	private Vector3 yVector;
 
 	public void Randomize () {
+		Vector3 upVector = Vector3.up;
 		xVector = Vector3.Cross(Random.insideUnitSphere,upVector).normalized;
 		yVector = Vector3.Cross(xVector,upVector);
 		seed = Random.Range(int.MinValue,int.MaxValue);
@@ -40,6 +40,7 @@ public class Tendril : MonoBehaviour {
 	}
 		
 	void Update() {
+		Vector3 upVector = Vector3.up;
 		if (root.position != oldPos) {
 			vel = (root.position - oldPos).normalized;
 			leading = Vector3.Angle (vel, offset) <= 90;
@@ -54,8 +55,9 @@ public class Tendril : MonoBehaviour {
 		}
 		for (int i = 1; i < pointcount; i++) {
 			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast (root.position + upVector * 4, -upVector, out hit)) {
-				points [i] = hit.point + upVector * 0.1f;
+			Vector3 origin = root.position + upVector * 4;
+			if (Physics.Raycast (origin, points[i] - origin, out hit)) {
+				points [i] += Vector3.ClampMagnitude(hit.point + hit.normal * 0.1f - points[i],Time.deltaTime * 5);
 			}
 		}
 
