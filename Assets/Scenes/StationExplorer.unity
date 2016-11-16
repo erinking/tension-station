@@ -8721,7 +8721,6 @@ GameObject:
   - 4: {fileID: 452455774}
   - 33: {fileID: 452455776}
   - 23: {fileID: 452455775}
-  - 64: {fileID: 452455758}
   m_Layer: 0
   m_Name: Rotunda_002
   m_TagString: Untagged
@@ -8739,7 +8738,6 @@ GameObject:
   - 4: {fileID: 452455777}
   - 33: {fileID: 452455779}
   - 23: {fileID: 452455778}
-  - 64: {fileID: 452455759}
   m_Layer: 0
   m_Name: Rotunda_001
   m_TagString: Untagged
@@ -8757,7 +8755,6 @@ GameObject:
   - 4: {fileID: 452455780}
   - 33: {fileID: 452455782}
   - 23: {fileID: 452455781}
-  - 64: {fileID: 452455760}
   m_Layer: 0
   m_Name: Rotunda
   m_TagString: Untagged
@@ -8829,7 +8826,6 @@ GameObject:
   - 4: {fileID: 452455792}
   - 33: {fileID: 452455794}
   - 23: {fileID: 452455793}
-  - 64: {fileID: 452455764}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -8873,42 +8869,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4301094, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
---- !u!64 &452455758
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 452455748}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4301118, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
---- !u!64 &452455759
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 452455749}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4301084, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
---- !u!64 &452455760
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 452455750}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4301102, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
 --- !u!64 &452455761
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8941,22 +8901,10 @@ MeshCollider:
   m_GameObject: {fileID: 452455753}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4301106, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
---- !u!64 &452455764
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 452455754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300500, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
 --- !u!4 &452455765
 Transform:
   m_ObjectHideFlags: 0
@@ -15065,7 +15013,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400638, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750436410}
-  m_LocalRotation: {x: 0.58184975, y: -0.2535931, z: 0.7209352, w: -0.27819774}
+  m_LocalRotation: {x: 0.5818497, y: -0.25359306, z: 0.72093517, w: -0.2781977}
   m_LocalPosition: {x: -49.71034, y: 0.1334614, z: 17.577957}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17271,7 +17219,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400794, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 843245659}
-  m_LocalRotation: {x: 0.3509852, y: 0.30119675, z: 0.6620216, w: 0.58976054}
+  m_LocalRotation: {x: 0.35098517, y: 0.30119672, z: 0.6620215, w: 0.5897605}
   m_LocalPosition: {x: -53.09559, y: -0.011023792, z: 7.3772984}
   m_LocalScale: {x: 0.99999994, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26025,7 +25973,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400748, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1271911187}
-  m_LocalRotation: {x: -0.26998693, y: 0.66859967, z: -0.25916785, w: 0.64258367}
+  m_LocalRotation: {x: -0.2699869, y: 0.6685996, z: -0.25916782, w: 0.6425836}
   m_LocalPosition: {x: -40.165634, y: 0.09504391, z: 14.272312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
