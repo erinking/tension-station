@@ -23,7 +23,6 @@ public class Tendril : MonoBehaviour {
 	private Vector3 yVector;
 
 	public void Randomize () {
-		upVector = monster.groundPlane.normal;
 		xVector = Vector3.Cross(Random.insideUnitSphere,upVector).normalized;
 		yVector = Vector3.Cross(xVector,upVector);
 		seed = Random.Range(int.MinValue,int.MaxValue);
@@ -53,19 +52,20 @@ public class Tendril : MonoBehaviour {
 				points [i] = (points [i] - points [i + 1]).normalized * segmentLength + points [i + 1];
 			}
 		}
-		/*for (int i = 1; i < pointcount; i++) {
+		for (int i = 1; i < pointcount; i++) {
 			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast (points [i] + upVector * 4, -upVector, out hit)) {
+			if (Physics.Raycast (root.position + upVector * 4, -upVector, out hit)) {
 				points [i] = hit.point + upVector * 0.1f;
 			}
-		}*/
+		}
 
-		for (int i = 1; i < pointcount; i++) {
+		/*for (int i = 1; i < pointcount; i++) {
 			float distFromFloor = Vector3.Dot (points [i], upVector);
 			if (distFromFloor < 0) {
 				points [i].y = 0;
 			}
-		}
+		}*/
+
 		Vector3 angleOffset = GetRand (Vector3.Dot(root.position, xVector),Vector3.Dot(root.position, yVector), 0.5f);
 		Vector3 prevDir = startAngle + angleOffset * Vector3.Dot(startAngle,angleOffset) * 4;
 		points [0] = root.position;

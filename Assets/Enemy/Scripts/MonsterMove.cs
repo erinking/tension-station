@@ -7,11 +7,12 @@ public class MonsterMove : MonoBehaviour {
 	public Transform targetObj;
 	public GameObject tendrilPrefab;
 	public Light lantern;
+	public NavMeshAgent agent;
 
-	public Plane groundPlane = new Plane(Vector3.up,Vector3.zero);
 	private Vector3 targetPosition;
 
 	void Start(){
+		agent = GetComponent<NavMeshAgent> ();
 		for (int i = 0; i < 16; i++) {
 			GameObject tendril = Instantiate (tendrilPrefab, transform.position, transform.rotation) as GameObject;
 			Tendril script = tendril.GetComponent<Tendril> ();
