@@ -47,17 +47,19 @@ public class Tendril : MonoBehaviour {
 		}
 		if (leading) {
 			Vector3 end = points [pointcount - 1];
-			Vector3 dir = root.position + offset - end + GetRand (Vector3.Dot(root.position + offset, xVector),Vector3.Dot(root.position + offset, yVector), 0.5f) * 4 + vel * 2;
-			points [pointcount - 1] += dir.normalized * Mathf.Clamp01(dir.magnitude) * Time.deltaTime * Mathf.Max((100 - Vector3.Angle (vel, offset)),0) * 0.2f;
-			for (int i = pointcount-2; i >= 0; i--) {
-				points [i] = (points [i] - points [i + 1]).normalized * segmentLength + points [i + 1];
+			if (Physics.CheckSphere (end, 0.2f)) {
+				Vector3 dir = root.position + offset - end + GetRand (Vector3.Dot (root.position + offset, xVector), Vector3.Dot (root.position + offset, yVector), 0.5f) * 4 + vel * 2;
+				points [pointcount - 1] += dir.normalized * Mathf.Clamp01 (dir.magnitude) * Time.deltaTime * Mathf.Max ((100 - Vector3.Angle (vel, offset)), 0) * 0.2f;
+				for (int i = pointcount - 2; i >= 0; i--) {
+					points [i] = (points [i] - points [i + 1]).normalized * segmentLength + points [i + 1];
+				}
 			}
 		}
 		for (int i = 1; i < pointcount; i++) {
 			RaycastHit hit = new RaycastHit();
 			Vector3 origin = root.position + upVector * 4;
-			if (Physics.Raycast (origin, points[i] - origin, out hit)) {
-				points [i] += Vector3.ClampMagnitude(hit.point + hit.normal * 0.1f - points[i],Time.deltaTime * 5);
+			if (Physics.Raycast (origin, points[i] - origin, out hit, segmentLength * pointcount)) {
+				points [i] += Vector3.ClampMagnitude(hit.point + hit.normal * 0.1f - points[i],Time.deltaTime * 10);
 			}
 		}
 
