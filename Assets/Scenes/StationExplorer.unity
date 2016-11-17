@@ -781,7 +781,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 35010446}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -9041,7 +9041,7 @@ MeshRenderer:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452455747}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -21464,6 +21464,11 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: useController
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_IsPrefabParent: 0
@@ -29861,6 +29866,7 @@ Transform:
   m_Children:
   - {fileID: 740128292}
   - {fileID: 743771223}
+  - {fileID: 2144108042}
   m_Father: {fileID: 2134164348}
   m_RootOrder: 0
 --- !u!1 &1511446166
@@ -40655,6 +40661,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2142729977}
   m_Mesh: {fileID: 4300576, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
+--- !u!1 &2144108041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2144108042}
+  - 65: {fileID: 2144108043}
+  m_Layer: 0
+  m_Name: Ticket Booth Barrier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144108042
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2144108041}
+  m_LocalRotation: {x: -0, y: 0.4152349, z: -0, w: 0.9097142}
+  m_LocalPosition: {x: -25.39, y: 0.54, z: 15.16}
+  m_LocalScale: {x: 30, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 48.857002, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1510720319}
+  m_RootOrder: 2
+--- !u!65 &2144108043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2144108041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2144311301
 GameObject:
   m_ObjectHideFlags: 0
