@@ -99,9 +99,8 @@ public class PlayerMovementController : MonoBehaviour {
 			//and finally, normalize and set to our defined speed
 			velocity = useController ? velocity * speed : velocity.normalized * speed;
 
-			if (PlayerInput.GetButtonDown ("Sprint") && canSprint) 
+			if (PlayerInput.GetButton ("Sprint") && canSprint) 
 			{
-				Debug.Log ("Sprinting");
 				velocity *= runMultiplier;
 				curSprint -= Time.fixedDeltaTime;
 				if (curSprint <= 0f) 
@@ -158,7 +157,6 @@ public class PlayerMovementController : MonoBehaviour {
 			} 
 			break;
 		}
-
 
 		//and finally, set our velocity
 		rb.velocity = velocity;
