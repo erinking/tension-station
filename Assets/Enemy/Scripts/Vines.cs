@@ -51,7 +51,7 @@ public class Vines : MonoBehaviour {
 		Vector3 lineVector = (anchor2.position - anchor1.position).normalized;
 		Light currentTarget = (overrideTarget != null && overrideTarget.enabled) ? overrideTarget : target;
 		if (currentTarget.enabled) {
-			center = anchor1.position + Mathf.Clamp (Vector3.Dot (target.transform.position - anchor1.position, lineVector), spread * 0.5f, Vector3.Distance (anchor1.position, anchor2.position) - spread * 0.5f) * lineVector;
+			center = anchor1.position + Mathf.Clamp (Vector3.Dot (currentTarget.transform.position - anchor1.position, lineVector), spread * 0.5f, Vector3.Distance (anchor1.position, anchor2.position) - spread * 0.5f) * lineVector;
 		}
 		transform.position = center;
 		//Calculate attachment point positions

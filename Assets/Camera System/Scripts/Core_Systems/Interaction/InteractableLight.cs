@@ -4,11 +4,12 @@ using System.Collections;
 public class InteractableLight : InteractableComponent{
 
 	public Light brightLight;
+	public bool startState;
 
 	void Start()
 	{
 		brightLight = GetComponent<Light> ();
-		brightLight.enabled = false;
+		brightLight.enabled = startState;
 	}
 
 	public override void OnInteract()
