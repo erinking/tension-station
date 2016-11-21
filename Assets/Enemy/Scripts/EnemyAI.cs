@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour {
 	private EnemyVision enemyVision;
 	private NavMeshAgent nav;
 	private GameObject player;
+	private PlayerHealthManager phm;
 	private float endChaseTimer;
 	private float patrolTimer;
 	private int waypointIndex = 0;
@@ -21,6 +22,7 @@ public class EnemyAI : MonoBehaviour {
 		enemyVision = GetComponent<EnemyVision> ();
 		nav = GetComponent<NavMeshAgent> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
+		phm = player.GetComponent<PlayerHealthManager> ();
 	}
 
 	void Update()
@@ -56,7 +58,7 @@ public class EnemyAI : MonoBehaviour {
 
 		if (Vector3.SqrMagnitude (vecToPlayer) < 2 && enemyVision.canSeePlayer)
 		{
-			// TODO: hurt the player or something
+			phm.TakeDamage ();
 		}
 	}
 
