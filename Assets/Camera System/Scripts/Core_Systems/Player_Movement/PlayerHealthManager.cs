@@ -6,9 +6,10 @@ public class PlayerHealthManager : MonoBehaviour {
 	private float lifeTime;
 	public const float MAX_LIFE_TIME = 2.0f;
 	public Transform[] checkpoints;
-	private bool[] actives;
+	public bool[] actives;
 
 	private bool recentDamage = false;
+	private bool isDying = false;
 
 	public void Start()
 	{
@@ -39,9 +40,10 @@ public class PlayerHealthManager : MonoBehaviour {
 			StartCoroutine ("DelayRegen");
 		}
 
-		if (lifeTime <= 0f) 
+		if (!isDying && lifeTime <= 0f) 
 		{
-			Die ();
+			isDying = true;
+			StartCoroutine ("Die");
 		}
 	}
 
@@ -52,11 +54,11 @@ public class PlayerHealthManager : MonoBehaviour {
 		recentDamage = false;
 	}
 
-	private void Die()
+	private IEnumerator Die()
 	{
 		Transform targetSpawnPoint = checkpoints[0];
 
-		for (int i = actives.Length; i > 0; i--) 
+		for (int i = actives.Length - 1; i > 0; i--) 
 		{
 			if (actives[i]) 
 			{
@@ -65,8 +67,13 @@ public class PlayerHealthManager : MonoBehaviour {
 			}
 		}
 
+		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.AUTO;
+		yield return new WaitForSeconds (3f);
+
+		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.WALKING;
 		transform.position = targetSpawnPoint.position;
 		lifeTime = MAX_LIFE_TIME;
 		recentDamage = false;
+		isDying = false;
 	}
 }

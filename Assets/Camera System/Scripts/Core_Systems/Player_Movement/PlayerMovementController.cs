@@ -156,6 +156,9 @@ public class PlayerMovementController : MonoBehaviour {
 				}
 			} 
 			break;
+		case state.AUTO:
+			velocity = Vector3.zero;
+			break;
 		}
 
 		//and finally, set our velocity
