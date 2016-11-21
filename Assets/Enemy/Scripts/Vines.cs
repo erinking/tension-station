@@ -9,6 +9,7 @@ public class Vines : MonoBehaviour {
 	public Transform anchor1;
 	public Transform anchor2;
 	public Light target;
+	public Light overrideTarget;
 
 	const int loops = 20;
 	const int subdivisions = 15;
@@ -46,7 +47,8 @@ public class Vines : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Vector3 lineVector = (anchor2.position - anchor1.position).normalized;
-		if (target.enabled) {
+		Light currentTarget = (overrideTarget != null && overrideTarget.enabled) ? overrideTarget : target;
+		if (currentTarget.enabled) {
 			center = anchor1.position + Mathf.Clamp (Vector3.Dot (target.transform.position - anchor1.position, lineVector), spread * 0.5f, Vector3.Distance (anchor1.position, anchor2.position) - spread * 0.5f) * lineVector;
 		}
 		transform.position = center;
