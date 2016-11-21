@@ -6,6 +6,7 @@ public class Vines : MonoBehaviour {
 
 	public float spread = 30;
 	public float hang = 10;
+	public float startPosition = 1; //0 = start at anchor1, 1 = start at anchor2
 	public Transform anchor1;
 	public Transform anchor2;
 	public Light target;
@@ -40,8 +41,9 @@ public class Vines : MonoBehaviour {
 		Vector3 lineVector = (anchor2.position - anchor1.position).normalized;
 		transform.rotation = Quaternion.LookRotation (lineVector);
 		BoxCollider collider = GetComponent<BoxCollider> ();
-		collider.size = new Vector3 (2, hang, spread * 0.8f);
+		collider.size = new Vector3 (2, hang, spread);
 		collider.center = new Vector3 (0, -hang / 2, 0);
+		center = anchor1.position + lineVector * Mathf.Lerp (spread / 2, Vector3.Distance (anchor1.position, anchor2.position) - spread / 2, startPosition);
 	}
 	
 	// Update is called once per frame
