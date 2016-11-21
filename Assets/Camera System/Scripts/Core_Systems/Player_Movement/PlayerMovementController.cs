@@ -99,11 +99,9 @@ public class PlayerMovementController : MonoBehaviour {
 			//and finally, normalize and set to our defined speed
 			velocity = useController ? velocity * speed : velocity.normalized * speed;
 
-			//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
-			playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
-
 			if (PlayerInput.GetButtonDown ("Sprint") && canSprint) 
 			{
+				Debug.Log ("Sprinting");
 				velocity *= runMultiplier;
 				curSprint -= Time.fixedDeltaTime;
 				if (curSprint <= 0f) 
@@ -115,6 +113,9 @@ public class PlayerMovementController : MonoBehaviour {
 			{
 				curSprint = Mathf.Min (curSprint + Time.fixedDeltaTime * sprintRecoveryMultiplier, maxSprintDuration);
 			}
+
+			//update animation state based on current walk speed (0=idle, 1=walk, can blend between them)
+			playerAnimator.SetFloat ("walkspeed", velocity.magnitude / speed);
 
 			fallSpeed = 0f;
 

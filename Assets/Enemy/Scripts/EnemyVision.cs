@@ -37,7 +37,6 @@ public class EnemyVision : MonoBehaviour {
 
 			if (Physics.Raycast (transform.position + Vector3.up, dir, out hitInfo, visibleDistance)) 
 			{
-				Debug.Log (hitInfo.collider.gameObject.tag);
 				if (hitInfo.collider.gameObject == player) 
 				{
 					canSeePlayer = true;
