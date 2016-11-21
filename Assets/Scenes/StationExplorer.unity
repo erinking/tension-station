@@ -4334,6 +4334,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: runMultiplier
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: maxSprintDuration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: sprintRecoveryMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_IsPrefabParent: 0
