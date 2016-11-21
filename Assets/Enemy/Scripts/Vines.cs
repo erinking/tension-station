@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Vines : MonoBehaviour {
 
-	public float spread = 10;
+	public float spread = 30;
 	public float hang = 10;
 	public Transform anchor1;
 	public Transform anchor2;
