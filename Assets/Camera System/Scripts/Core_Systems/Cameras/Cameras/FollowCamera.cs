@@ -2,6 +2,23 @@
 using System.Collections;
 
 public class FollowCamera : SiphonCamera {
-	//follows the target in 3rd person, allowing for some finer tuned control
+	// === main functions ===
+	void Start(){
+		m_type = CameraType.FOLLOW;
+	}
+
+	void DelayedInit()
+	{
+	}
+
+	void Update()
+	{
+		if (!isActive)
+		{
+			return;
+		}
+
+		//(target.transform.position + Vector3.up) - transform.position;
+	}
 
 }
