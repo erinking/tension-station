@@ -20,7 +20,7 @@ public class PlayerInteractionController : MonoBehaviour {
 				Debug.DrawRay(transform.position, transform.forward*interactionDistance, Color.green);
 			}
 			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, interactionMask)){
+			if (Physics.Raycast(transform.position + transform.up, transform.forward, out hit, interactionDistance, interactionMask)){
 				InteractableComponent intComp = hit.collider.gameObject.GetComponent<InteractableComponent>();
 				if (intComp != null){
 					intComp.OnInteract();
