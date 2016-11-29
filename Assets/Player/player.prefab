@@ -305,10 +305,8 @@ GameObject:
   - 136: {fileID: 136000013633059738}
   - 114: {fileID: 114000010808284776}
   - 114: {fileID: 114000011424036624}
-  - 114: {fileID: 114000010027873914}
   - 82: {fileID: 82000011982484528}
   - 82: {fileID: 82000013830031540}
-  - 114: {fileID: 114000012516724028}
   - 114: {fileID: 114000012137982348}
   m_Layer: 0
   m_Name: player
@@ -1508,18 +1506,6 @@ Light:
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114000010027873914
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012630853492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0926378d02f7d8547957969f28890b09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyIfDuplicate: 1
 --- !u!114 &114000010808284776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1551,9 +1537,9 @@ MonoBehaviour:
   maxSprintDuration: 3
   sprintRecoveryMultiplier: 3
   useController: 0
-  curMoveSpaceCameraTransform: {fileID: 0}
-  flashlight: {fileID: 108000012013798584}
   curState: 0
+  curMoveSpaceCamera: {fileID: 0}
+  flashlight: {fileID: 108000012013798584}
 --- !u!114 &114000012137982348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1568,7 +1554,7 @@ MonoBehaviour:
   checkpoints:
   - {fileID: 0}
   - {fileID: 0}
-  actives: 
+  actives: 0100
 --- !u!114 &114000012478645876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1584,21 +1570,6 @@ MonoBehaviour:
   speed: 0.0014
   MakeSourceStationary: 1
   positionOffset: 0
---- !u!114 &114000012516724028
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012630853492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b729c29b6b4caad4e95a74e6eb244fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  actives: 0100
 --- !u!136 &136000013633059738
 CapsuleCollider:
   m_ObjectHideFlags: 1
