@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInteractionController : MonoBehaviour 
-{
+public class PlayerInteractionController : MonoBehaviour {
 	// === inspector vars ===
 	public float interactionDistance;
 	public LayerMask interactionMask;
@@ -20,11 +19,15 @@ public class PlayerInteractionController : MonoBehaviour
 
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.layer == PLAYER_LAYER)
+		if (PlayerInput.GetButtonDown ("Interact"))
 		{
-			InteractableComponent intComp = other.gameObject.GetComponent<InteractableComponent>();
-			if (intComp != null){
-				intComp.OnInteract();
+			if (other.gameObject.layer == PLAYER_LAYER)
+			{
+				InteractableComponent intComp = other.gameObject.GetComponent<InteractableComponent> ();
+				if (intComp != null)
+				{
+					intComp.OnInteract ();
+				}
 			}
 		}
 	}
