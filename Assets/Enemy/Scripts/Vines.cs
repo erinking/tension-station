@@ -11,6 +11,7 @@ public class Vines : MonoBehaviour {
 	public Transform anchor2;
 	public Light target;
 	public Light overrideTarget;
+	public Color glowColor;
 
 	const int loops = 20;
 	const int subdivisions = 15;
@@ -20,6 +21,7 @@ public class Vines : MonoBehaviour {
 	private LineRenderer line;
 	private Vector3[] points;
 	private Vector3 center;
+	private Material matInstance;
 
 	// Use this for initialization
 	void Start () {
@@ -44,10 +46,14 @@ public class Vines : MonoBehaviour {
 		collider.size = new Vector3 (2, hang, spread);
 		collider.center = new Vector3 (0, -hang / 2, 0);
 		center = anchor1.position + lineVector * Mathf.Lerp (spread / 2, Vector3.Distance (anchor1.position, anchor2.position) - spread / 2, startPosition);
+		matInstance = new Material (line.material);
+		line.material = matInstance;
+		matInstance.SetTextureScale ("_Detail", new Vector2(10 * loops, 1));
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		//**** Movement code ****
 		Vector3 lineVector = (anchor2.position - anchor1.position).normalized;
 		Light currentTarget = (overrideTarget != null && overrideTarget.enabled) ? overrideTarget : target;
 		if (currentTarget.enabled) {
@@ -76,5 +82,11 @@ public class Vines : MonoBehaviour {
 		}
 		points [subdivisions * loops] = points [0];
 		line.SetPositions (points);
+
+		//**** Light Changes ****
+		matInstance.SetColor("_DetailColor",
+			Color.Lerp (matInstance.GetColor("_DetailColor"), currentTarget.enabled ? glowColor : Color.black, 0.1f)
+		);
+		matInstance.SetTextureOffset ("_Detail", new Vector2(Time.time * 0.2f, 0));
 	}
 }
