@@ -67,9 +67,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spread: 5
   hang: 6.5
+  startPosition: 1
   anchor1: {fileID: 0}
   anchor2: {fileID: 0}
   target: {fileID: 0}
+  overrideTarget: {fileID: 0}
 --- !u!120 &120000010874636546
 LineRenderer:
   m_ObjectHideFlags: 1

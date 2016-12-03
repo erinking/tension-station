@@ -55,11 +55,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c07c0bb8f934101b7d45036fb5bf9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   targetObj: {fileID: 0}
   tendrilPrefab: {fileID: 1000011375109098, guid: 7c8e85ac6c41a4ab99a3629ddc9deeb1,
     type: 2}
   lantern: {fileID: 0}
+  vision: {fileID: 114000013480630676}
+  glowColor: {r: 1, g: 1, b: 1, a: 1}
+  tendrilMaterial: {fileID: 2100000, guid: a2357c5f5ff304de68e5be31e6acf004, type: 2}
 --- !u!114 &114000013060077768
 MonoBehaviour:
   m_ObjectHideFlags: 1
