@@ -7,29 +7,29 @@ Properties {
 }
 
 SubShader {
-	Tags { "RenderType"="Opaque" }
-	LOD 250
-	
-CGPROGRAM
-#pragma surface surf Lambert
+	Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+	LOD 200
 
-sampler2D _MainTex;
-sampler2D _Detail;
-fixed4 _Color;
-fixed4 _DetailColor;
+	CGPROGRAM
+	#pragma surface surf Lambert alpha:fade
 
-struct Input {
-	float2 uv_MainTex;
-	float2 uv_Detail;
-};
+	sampler2D _MainTex;
+	sampler2D _Detail;
+	fixed4 _Color;
+	fixed4 _DetailColor;
 
-void surf (Input IN, inout SurfaceOutput o) {
-	fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-	c.rgb += tex2D(_Detail,IN.uv_Detail).rgb * unity_ColorSpaceDouble.r * _DetailColor;
-	o.Albedo = c.rgb;
-	o.Alpha = c.a;
-}
-ENDCG
+	struct Input {
+		float2 uv_MainTex;
+		float2 uv_Detail;
+	};
+
+	void surf (Input IN, inout SurfaceOutput o) {
+		fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+		c.rgb += tex2D(_Detail,IN.uv_Detail).rgb * unity_ColorSpaceDouble.r * _DetailColor;
+		o.Albedo = c.rgb;
+		o.Alpha = c.a;
+	}
+	ENDCG
 }
 
 Fallback "Legacy Shaders/Diffuse"

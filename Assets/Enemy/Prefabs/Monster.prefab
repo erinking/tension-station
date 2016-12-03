@@ -60,8 +60,8 @@ MonoBehaviour:
     type: 2}
   lantern: {fileID: 0}
   vision: {fileID: 114000013480630676}
-  glowColor: {r: 1, g: 1, b: 1, a: 1}
-  tendrilMaterial: {fileID: 2100000, guid: a2357c5f5ff304de68e5be31e6acf004, type: 2}
+  glowColor: {r: 1, g: 0.3931034, b: 0, a: 1}
+  tendrilMaterial: {fileID: 2100000, guid: 3de1e22869043408f97073d70f4a85bd, type: 2}
 --- !u!114 &114000013060077768
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -67,7 +67,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: a2357c5f5ff304de68e5be31e6acf004, type: 2}
+  - {fileID: 2100000, guid: 3de1e22869043408f97073d70f4a85bd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -95,8 +95,8 @@ LineRenderer:
   - {x: 0, y: -0.2, z: 8}
   - {x: 0, y: -0.2, z: 9}
   m_Parameters:
-    startWidth: 0.5
-    endWidth: 0
+    startWidth: 1
+    endWidth: 0.2
     m_StartColor:
       serializedVersion: 2
       rgba: 4278190080
