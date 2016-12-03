@@ -3,18 +3,20 @@ using System.Collections;
 
 public class MonsterMove : MonoBehaviour {
 
-	public float speed;
 	public Transform targetObj;
 	public GameObject tendrilPrefab;
 	public Light lantern;
-	public NavMeshAgent agent;
+	public EnemyVision vision;
+	public Color glowColor;
+	public Material tendrilMaterial;
 
-	private Vector3 targetPosition;
+	private Material tendrilMaterialInstance;
 
 	void Start(){
-		agent = GetComponent<NavMeshAgent> ();
+		tendrilMaterialInstance = new Material (tendrilMaterial);
 		for (int i = 0; i < 16; i++) {
 			GameObject tendril = Instantiate (tendrilPrefab, transform.position, transform.rotation) as GameObject;
+			tendril.GetComponent<Renderer> ().material = tendrilMaterialInstance;
 			Tendril script = tendril.GetComponent<Tendril> ();
 			script.root = transform;
 			script.monster = this;
@@ -24,17 +26,8 @@ public class MonsterMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		/*Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		float rayDistance;
-		if (groundPlane.Raycast(ray, out rayDistance))
-			targetPosition = ray.GetPoint(rayDistance);
-		targetObj.position = targetPosition;*/
-
-		/*
-		if (lantern.enabled) {
-			targetPosition = targetObj.position - groundPlane.normal * groundPlane.GetDistanceToPoint (targetObj.position);
-		}
-		transform.position = Vector3.MoveTowards (transform.position, targetPosition, Time.deltaTime * (Tendril.GetRand(transform.position,0.5f,100).magnitude + 0.4f) * speed);
-		*/
+		tendrilMaterialInstance.SetColor("_DetailColor",
+			Color.Lerp (tendrilMaterialInstance.GetColor("_DetailColor"), vision.canSeePlayer ? glowColor : Color.black, 0.1f)
+		);
 	}
 }

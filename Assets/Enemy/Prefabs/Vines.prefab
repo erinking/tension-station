@@ -67,9 +67,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spread: 5
   hang: 6.5
+  startPosition: 1
   anchor1: {fileID: 0}
   anchor2: {fileID: 0}
   target: {fileID: 0}
+  overrideTarget: {fileID: 0}
+  glowColor: {r: 0.38235295, g: 0.38235295, b: 0.38235295, a: 1}
 --- !u!120 &120000010874636546
 LineRenderer:
   m_ObjectHideFlags: 1

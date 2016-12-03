@@ -308,6 +308,7 @@ GameObject:
   - 82: {fileID: 82000011982484528}
   - 82: {fileID: 82000013830031540}
   - 114: {fileID: 114000012137982348}
+  - 135: {fileID: 135000010165637462}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -1570,6 +1571,18 @@ MonoBehaviour:
   speed: 0.0014
   MakeSourceStationary: 1
   positionOffset: 0
+--- !u!135 &135000010165637462
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012630853492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9
+  m_Center: {x: 0, y: 1.03, z: 0.39}
 --- !u!136 &136000013633059738
 CapsuleCollider:
   m_ObjectHideFlags: 1
