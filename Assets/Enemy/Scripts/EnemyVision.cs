@@ -33,7 +33,7 @@ public class EnemyVision : MonoBehaviour {
 			Vector3 dir = other.transform.position - transform.position;
 
 			RaycastHit hitInfo;
-			float visibleDistance = playerMov.flashlight.enabled ? visionVolume.radius : visionVolume.radius / 5.0f;
+			float visibleDistance = playerMov.flashlight.enabled ? visionVolume.radius : visionVolume.radius / 3.5f;
 
 			if (Physics.Raycast (transform.position + Vector3.up, dir, out hitInfo, visibleDistance)) 
 			{
