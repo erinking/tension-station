@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System.Collections;
 
 public class SiphonCamera : MonoBehaviour {
@@ -39,6 +41,7 @@ public class SiphonCamera : MonoBehaviour {
 	}
 
 	private void DrawFrustumGizmos(){
+		#if UNITY_EDITOR
 		if (Selection.activeObject != (Object) gameObject){
 			Camera cam = GetComponent<Camera>();
 			Gizmos.color = new Color(1f, 0f, 0f, .25f);
@@ -47,6 +50,7 @@ public class SiphonCamera : MonoBehaviour {
 			Gizmos.DrawFrustum(Vector3.zero, cam.fieldOfView, cam.farClipPlane, cam.nearClipPlane, cam.aspect);
 			Gizmos.matrix = temp;
 		}
+		#endif
 	}
 
 	protected virtual void OnStationaryDrawGizmos(){}

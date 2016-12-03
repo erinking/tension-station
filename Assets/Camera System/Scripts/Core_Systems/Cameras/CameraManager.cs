@@ -37,7 +37,7 @@ public class CameraManager {
 				cam.gameObject.GetComponent<SiphonCamera>().Deactivate();
 			}
 		}
-		GameStatics.PlayerObj.GetComponent<PlayerMovementController>().curMoveSpaceCameraTransform = main.transform;
+		GameStatics.PlayerObj.GetComponent<PlayerMovementController>().curMoveSpaceCamera = main;
 	}
 
 	public void SwitchCameras(Camera newCam, GameObject target){

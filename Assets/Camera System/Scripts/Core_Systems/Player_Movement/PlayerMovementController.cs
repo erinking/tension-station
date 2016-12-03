@@ -5,6 +5,7 @@ public class PlayerMovementController : MonoBehaviour {
 
 	// === constants ===
 	private const float DEAD_ZONE = 0.25f;
+	public enum state {WALKING, AUTO, GUILOCK, FALLING};
 
 	// === inspector vars ===
 	public float speed;
@@ -12,19 +13,18 @@ public class PlayerMovementController : MonoBehaviour {
 	public float maxSprintDuration;
 	public float sprintRecoveryMultiplier;
 	public bool useController;
+	public state curState;
 
 	// === internal vars ===
 	private Rigidbody rb;
 	private float curSprint;
 	[HideInInspector]
-	public Transform curMoveSpaceCameraTransform;
+	public Camera curMoveSpaceCamera;
 	private Vector2 inputVec;
 	private Vector3 velocity;
 	private bool canSprint = true;
 	public Light flashlight;
 	private Animator playerAnimator;
-	public enum state {WALKING, AUTO, GUILOCK, FALLING};
-	public state curState;
 	private float fallSpeed = 0f;
 	private float targetHeight;
 	private RaycastHit hitInfo;
@@ -50,7 +50,7 @@ public class PlayerMovementController : MonoBehaviour {
 
 	private IEnumerator DelayedInit(){
 		yield return null;
-		curMoveSpaceCameraTransform = CameraManager.Get().main.transform;
+		curMoveSpaceCamera = CameraManager.Get().main;
 	}
 
 	void FixedUpdate () {
@@ -82,14 +82,14 @@ public class PlayerMovementController : MonoBehaviour {
 		if (inputVec.magnitude <= DEAD_ZONE) {
 			inputVec.x = 0f;
 			inputVec.y = 0f;
-			if (curMoveSpaceCameraTransform != CameraManager.Get ().main.transform) {
-				curMoveSpaceCameraTransform = CameraManager.Get ().main.transform;
+			if (curMoveSpaceCamera != CameraManager.Get ().main) {
+				curMoveSpaceCamera = CameraManager.Get ().main;
 			}
 		}
 		velocity.x = inputVec.x;
 		velocity.z = inputVec.y;
 		//now convert this to camera space for the camera we are currently using (which is reset when we stop pressing things)
-		velocity = curMoveSpaceCameraTransform.TransformDirection (velocity);
+		velocity = curMoveSpaceCamera.transform.TransformDirection (velocity);
 
 		switch (curState) 
 		{

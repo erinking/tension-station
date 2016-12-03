@@ -20,10 +20,11 @@ public class LevelManager : MonoBehaviour {
 
 	// === unity functions ===
 	void Start () {
-		if (Application.isEditor){
-			if (debug) Debug.Log("running in editor, starting camera manager");
-			CameraManager.Get().UpdateOnLevelSwitch();
+		if (Application.isEditor) {
+			if (debug)
+				Debug.Log ("running in editor, starting camera manager");
 		}
+		CameraManager.Get().UpdateOnLevelSwitch();
 	}
 
 	// === internal functions ===

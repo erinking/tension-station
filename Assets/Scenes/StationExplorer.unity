@@ -2810,6 +2810,14 @@ Prefab:
       propertyPath: gameFlowUI
       value: 
       objectReference: {fileID: 359287733}
+    - target: {fileID: 11495802, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
+      propertyPath: debug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454396, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
   m_IsPrefabParent: 0
@@ -4980,7 +4988,12 @@ Prefab:
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11453762, guid: 6c876f04e7c1a7044a91cb99bb982931, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11453762, guid: 6c876f04e7c1a7044a91cb99bb982931, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6c876f04e7c1a7044a91cb99bb982931, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &740128291
@@ -5006,7 +5019,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740128291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.01, y: -0.61, z: 0}
+  m_LocalPosition: {x: -21.01, y: -0.54, z: 0}
   m_LocalScale: {x: 100, y: 1, z: 62}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5189,7 +5202,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012815563408, guid: cec25c5ece32b4d7cb3757518b997fe9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.088
+      value: 1.15
       objectReference: {fileID: 0}
     - target: {fileID: 4000012815563408, guid: cec25c5ece32b4d7cb3757518b997fe9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5238,6 +5251,16 @@ Prefab:
         type: 2}
       propertyPath: patrolWaitTimes.Array.data[0]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195000013555555358, guid: cec25c5ece32b4d7cb3757518b997fe9,
+        type: 2}
+      propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195000013555555358, guid: cec25c5ece32b4d7cb3757518b997fe9,
+        type: 2}
+      propertyPath: m_BaseOffset
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cec25c5ece32b4d7cb3757518b997fe9, type: 2}
@@ -5502,6 +5525,15 @@ Prefab:
       propertyPath: ambienceClips.Array.data[8]
       value: 
       objectReference: {fileID: 8300000, guid: d5f216a6b03d54e3495d07ba529c1b4f, type: 3}
+    - target: {fileID: 114000012610044752, guid: b6737ff1bfca1e543a488553978cd1ad,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471830, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
   m_IsPrefabParent: 0
@@ -6255,6 +6287,15 @@ Prefab:
       propertyPath: checkpoints.Array.data[1]
       value: 
       objectReference: {fileID: 1986072266}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: useController
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_IsPrefabParent: 0
@@ -7227,7 +7268,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 140998affab3f4a3187b9045ee8dc54a, type: 3}
-    m_FontSize: 72
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
