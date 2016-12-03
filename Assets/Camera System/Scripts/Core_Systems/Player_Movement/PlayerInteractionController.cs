@@ -1,30 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInteractionController : MonoBehaviour {
+public class PlayerInteractionController : MonoBehaviour 
+{
 	// === inspector vars ===
 	public float interactionDistance;
 	public LayerMask interactionMask;
+	private const int PLAYER_LAYER = 8;
 
 	// === internal vars ===
 	private bool debug;
+	private SphereCollider interactColl;
 
 	// === unity functions ===
 	void Start () {
 		debug = Application.isEditor;
+		interactColl = GetComponent<SphereCollider> ();
 	}
 
-	void Update () {
-		if (PlayerInput.GetButtonDown("Interact")){
-			if (debug){
-				Debug.DrawRay(transform.position, transform.forward*interactionDistance, Color.green);
-			}
-			RaycastHit hit = new RaycastHit();
-			if (Physics.Raycast(transform.position + transform.up, transform.forward, out hit, interactionDistance, interactionMask)){
-				InteractableComponent intComp = hit.collider.gameObject.GetComponent<InteractableComponent>();
-				if (intComp != null){
-					intComp.OnInteract();
-				}
+	void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.layer == PLAYER_LAYER)
+		{
+			InteractableComponent intComp = other.gameObject.GetComponent<InteractableComponent>();
+			if (intComp != null){
+				intComp.OnInteract();
 			}
 		}
 	}
