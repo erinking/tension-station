@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Tendril : MonoBehaviour {
 
-	const float segmentLength = 0.25f;
+	const float segmentLength = 0.4f;
 	const float maxDegrees = 10;
 
 	public Transform root;
@@ -32,14 +32,14 @@ public class Tendril : MonoBehaviour {
 		offset = Vector3.Dot (xVector, offset) * xVector + Vector3.Dot (yVector, offset) * yVector;
 		line = GetComponent<LineRenderer> ();
 		line.SetVertexCount (pointcount);
-		line.SetWidth (pointcount / 80f, 0);
+		line.SetWidth (pointcount / 10f, pointcount / 10f);
 		oldPos = root.position;
 		offset = offset.normalized * pointcount * segmentLength * 0.5f;
 		startAngle = (offset.normalized + (Vector3)Random.insideUnitCircle).normalized;
 		Cursor.visible = false;
 	}
 		
-	void Update() {
+	void FixedUpdate() {
 		Vector3 upVector = Vector3.up;
 		if (root.position != oldPos) {
 			vel = (root.position - oldPos).normalized;
@@ -49,26 +49,20 @@ public class Tendril : MonoBehaviour {
 			Vector3 end = points [pointcount - 1];
 			if (Physics.CheckSphere (end, 0.2f)) {
 				Vector3 dir = root.position + offset - end + GetRand (Vector3.Dot (root.position + offset, xVector), Vector3.Dot (root.position + offset, yVector), 0.5f) * 4 + vel * 2;
-				points [pointcount - 1] += dir.normalized * Mathf.Clamp01 (dir.magnitude) * Time.deltaTime * Mathf.Max ((100 - Vector3.Angle (vel, offset)), 0) * 0.2f;
+				points [pointcount - 1] += dir.normalized * Mathf.Clamp01 (dir.magnitude) * Time.fixedDeltaTime * Mathf.Max ((100 - Vector3.Angle (vel, offset)), 0) * 0.2f;
 				for (int i = pointcount - 2; i >= 0; i--) {
 					points [i] = (points [i] - points [i + 1]).normalized * segmentLength + points [i + 1];
 				}
 			}
 		}
+
 		for (int i = 1; i < pointcount; i++) {
 			RaycastHit hit = new RaycastHit();
 			Vector3 origin = root.position + upVector * 4;
 			if (Physics.Raycast (origin, points[i] - origin, out hit, segmentLength * pointcount)) {
-				points [i] += Vector3.ClampMagnitude(hit.point + hit.normal * 0.1f - points[i],Time.deltaTime * 10);
+				points [i] += Vector3.ClampMagnitude(hit.point + hit.normal * 0.1f - points[i],Time.fixedDeltaTime * 10);
 			}
 		}
-
-		/*for (int i = 1; i < pointcount; i++) {
-			float distFromFloor = Vector3.Dot (points [i], upVector);
-			if (distFromFloor < 0) {
-				points [i].y = 0;
-			}
-		}*/
 
 		Vector3 angleOffset = GetRand (Vector3.Dot(root.position, xVector),Vector3.Dot(root.position, yVector), 0.5f);
 		Vector3 prevDir = startAngle + angleOffset * Vector3.Dot(startAngle,angleOffset) * 4;

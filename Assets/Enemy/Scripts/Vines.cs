@@ -48,7 +48,7 @@ public class Vines : MonoBehaviour {
 		center = anchor1.position + lineVector * Mathf.Lerp (spread / 2, Vector3.Distance (anchor1.position, anchor2.position) - spread / 2, startPosition);
 		matInstance = new Material (line.material);
 		line.material = matInstance;
-		matInstance.SetTextureScale ("_Detail", new Vector2(10 * loops, 1));
+		//matInstance.SetTextureScale ("_Detail", new Vector2(10 * loops, 1));
 	}
 	
 	// Update is called once per frame
@@ -87,6 +87,6 @@ public class Vines : MonoBehaviour {
 		matInstance.SetColor("_DetailColor",
 			Color.Lerp (matInstance.GetColor("_DetailColor"), currentTarget.enabled ? glowColor : Color.black, 0.1f)
 		);
-		matInstance.SetTextureOffset ("_Detail", new Vector2(Time.time * 0.2f, 0));
+		matInstance.SetTextureOffset ("_Detail", new Vector2(Time.time * 0.1f, 0));
 	}
 }

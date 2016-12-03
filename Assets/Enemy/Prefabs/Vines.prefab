@@ -36,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012724314066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -49.1, y: 2.5, z: 13.1}
+  m_LocalPosition: {x: -47.5, y: 7, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -65,14 +65,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9756c2010e54c358aaac42592e1e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spread: 5
-  hang: 6.5
+  spread: 14
+  hang: 7
   startPosition: 1
   anchor1: {fileID: 0}
   anchor2: {fileID: 0}
   target: {fileID: 0}
   overrideTarget: {fileID: 0}
-  glowColor: {r: 0.38235295, g: 0.38235295, b: 0.38235295, a: 1}
+  glowColor: {r: 0.44117647, g: 0.1643002, b: 0, a: 1}
 --- !u!120 &120000010874636546
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -114,7 +114,7 @@ LineRenderer:
   - {x: 0, y: -0.2, z: 8}
   - {x: 0, y: -0.2, z: 9}
   m_Parameters:
-    startWidth: 0.02
+    startWidth: 1
     endWidth: 0.1
     m_StartColor:
       serializedVersion: 2
