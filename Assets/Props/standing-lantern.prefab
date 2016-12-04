@@ -252,8 +252,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010729580570}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -26.575, y: 3.24, z: -12.43}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -279,7 +279,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011584742454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.596, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -873,13 +873,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010729580570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4617a373f5e9449faab500f2022c0add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.15
-  speed: 0.07
-  MakeSourceStationary: 1
-  positionOffset: 0
+  scale: 15
+  speed: 1
+  light: {fileID: 108000013086974584}
 --- !u!136 &136000012802467062
 CapsuleCollider:
   m_ObjectHideFlags: 1

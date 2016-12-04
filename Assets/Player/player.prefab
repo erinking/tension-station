@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010734501296}
   - 108: {fileID: 108000014070425056}
-  - 114: {fileID: 114000014000058708}
+  - 114: {fileID: 114000014140544362}
   m_Layer: 0
   m_Name: lantern light
   m_TagString: Untagged
@@ -626,9 +626,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011196134192}
-  m_LocalRotation: {x: -0.03222546, y: -0.7219764, z: -0.01991193, w: 0.69088}
-  m_LocalPosition: {x: 0.01, y: 0.29, z: -0.03}
-  m_LocalScale: {x: 2.9324307, y: 3.3333378, z: 3.333337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013803451274}
@@ -1512,8 +1512,8 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.93333334, g: 0.7797003, b: 0.50493336, a: 1}
-  m_Intensity: 2
-  m_Range: 20
+  m_Intensity: 1
+  m_Range: 15
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c438d151e03b92498f20174bbfa4676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   runMultiplier: 1.5
   maxSprintDuration: 3
   sprintRecoveryMultiplier: 3
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   actives: 0100
---- !u!114 &114000014000058708
+--- !u!114 &114000014140544362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1593,13 +1593,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011196134192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b536e216bbd27d458fd574b3bcccea4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4617a373f5e9449faab500f2022c0add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.15
-  speed: 0.07
-  MakeSourceStationary: 1
-  positionOffset: 0
+  scale: 15
+  speed: 1
+  light: {fileID: 108000014070425056}
 --- !u!135 &135000010165637462
 SphereCollider:
   m_ObjectHideFlags: 1
