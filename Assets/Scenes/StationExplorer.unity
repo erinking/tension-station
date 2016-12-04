@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 112000445, guid: f7af068383c506c46b389c7363042884,
+  m_LightingDataAsset: {fileID: 112000453, guid: f7af068383c506c46b389c7363042884,
     type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &5
@@ -5126,15 +5126,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SampleCount: 12
-  ScatteringCoef: 0.8
+  ScatteringCoef: 0.5
   ExtinctionCoef: 0.01
-  SkyboxExtinctionCoef: 0.45
-  MieG: 0.25
-  HeightFog: 1
+  SkyboxExtinctionCoef: 0.9
+  MieG: 0.1
+  HeightFog: 0
   HeightScale: 0.1
   GroundLevel: 0
   Noise: 1
-  NoiseScale: 1
+  NoiseScale: 0.015
   NoiseIntensity: 1
   NoiseIntensityOffset: 0.3
   NoiseVelocity: {x: 3, y: 3}
@@ -8152,6 +8152,18 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300514, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
+      propertyPath: m_PreserveUVs
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300514, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
+      propertyPath: m_IgnoreNormalsForChartDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
   m_IsPrefabParent: 0
@@ -8184,15 +8196,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SampleCount: 12
-  ScatteringCoef: 0.8
+  ScatteringCoef: 0.5
   ExtinctionCoef: 0.01
-  SkyboxExtinctionCoef: 0.45
-  MieG: 0.25
-  HeightFog: 1
+  SkyboxExtinctionCoef: 0.9
+  MieG: 0.1
+  HeightFog: 0
   HeightScale: 0.1
   GroundLevel: 0
   Noise: 1
-  NoiseScale: 1
+  NoiseScale: 0.015
   NoiseIntensity: 1
   NoiseIntensityOffset: 0.3
   NoiseVelocity: {x: 3, y: 3}

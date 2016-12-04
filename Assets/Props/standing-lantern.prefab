@@ -57,6 +57,7 @@ GameObject:
   - 114: {fileID: 114000011850888668}
   - 136: {fileID: 136000012802467062}
   - 114: {fileID: 114000013151453896}
+  - 114: {fileID: 114000011778290384}
   m_Layer: 8
   m_Name: LampLight
   m_TagString: Untagged
@@ -852,6 +853,18 @@ Light:
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000011778290384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010729580570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd933407a8045aaba47f749be6e08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlLight: {fileID: 108000013086974584}
 --- !u!114 &114000011850888668
 MonoBehaviour:
   m_ObjectHideFlags: 1

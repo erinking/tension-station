@@ -154,6 +154,7 @@ GameObject:
   - 4: {fileID: 4000010459239900}
   - 108: {fileID: 108000011273643514}
   - 114: {fileID: 114000012787803766}
+  - 114: {fileID: 114000011813026616}
   m_Layer: 0
   m_Name: lantern light
   m_TagString: Untagged
@@ -649,6 +650,18 @@ Light:
   m_BounceIntensity: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000011813026616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013563426092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd933407a8045aaba47f749be6e08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlLight: {fileID: 108000011273643514}
 --- !u!114 &114000012787803766
 MonoBehaviour:
   m_ObjectHideFlags: 1
