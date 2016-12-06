@@ -2072,7 +2072,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000011455244792, guid: 731f03ae7be9a439ab84af04f5567e45, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 731f03ae7be9a439ab84af04f5567e45, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &562043969
@@ -2755,6 +2756,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010762436508, guid: b081e65e4e2801b4bbbaa47494776c9b,
     type: 2}
   m_PrefabInternal: {fileID: 1214935990}
+--- !u!1 &722300143 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010160364410, guid: eab10438a022d4c079533db9761304b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1050367225}
+--- !u!114 &722300144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 722300143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd933407a8045aaba47f749be6e08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlLight: {fileID: 1760548811}
 --- !u!1001 &735140047
 Prefab:
   m_ObjectHideFlags: 0
@@ -4224,7 +4242,8 @@ Prefab:
       propertyPath: checkpoints.Array.data[1]
       value: 
       objectReference: {fileID: 1986072266}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000013374957996, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1070373634
@@ -9597,6 +9616,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000210108}
+--- !u!1 &2007717579 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011347478688, guid: 731f03ae7be9a439ab84af04f5567e45,
+    type: 2}
+  m_PrefabInternal: {fileID: 547609569}
+--- !u!114 &2007717580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007717579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79fd933407a8045aaba47f749be6e08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlLight: {fileID: 968058640}
 --- !u!4 &2009472354 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010762436508, guid: b081e65e4e2801b4bbbaa47494776c9b,
