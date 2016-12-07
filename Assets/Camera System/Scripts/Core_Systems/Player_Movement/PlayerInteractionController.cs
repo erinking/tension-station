@@ -5,6 +5,7 @@ public class PlayerInteractionController : MonoBehaviour {
 	// === inspector vars ===
 	public float interactionDistance;
 	public LayerMask interactionMask;
+	public GameObject interactionHint;
 	private const int PLAYER_LAYER = 8;
 	private InteractableComponent curInteractable;
 
@@ -39,6 +40,7 @@ public class PlayerInteractionController : MonoBehaviour {
 			if (intComp != null)
 			{
 				curInteractable = intComp;
+				interactionHint.SetActive (true);
 			}
 		}
 	}
@@ -48,6 +50,7 @@ public class PlayerInteractionController : MonoBehaviour {
 		if (other.gameObject.layer == PLAYER_LAYER)
 		{
 			curInteractable = null;
+			interactionHint.SetActive (false);
 		}
 	}
 }
