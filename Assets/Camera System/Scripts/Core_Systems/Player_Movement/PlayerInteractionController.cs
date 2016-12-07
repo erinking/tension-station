@@ -15,7 +15,7 @@ public class PlayerInteractionController : MonoBehaviour {
 	// === unity functions ===
 	void Start () {
 		debug = Application.isEditor;
-		interactColl = GetComponent<SphereCollider> ();
+		interactColl = GetComponentInChildren<SphereCollider> ();
 		curInteractable = null;
 	}
 
