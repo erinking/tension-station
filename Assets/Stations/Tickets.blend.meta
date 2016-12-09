@@ -213,6 +213,8 @@ ModelImporter:
     100410: Columns_001_cell_210
     100412: Columns_001_cell_211
     100414: Columns_001_cell_212
+    100416: Columns_Rubble
+    100418: Window_Columns
     400000: //RootNode
     400002: Booth
     400004: Clock
@@ -421,6 +423,8 @@ ModelImporter:
     400410: Columns_001_cell_210
     400412: Columns_001_cell_211
     400414: Columns_001_cell_212
+    400416: Columns_Rubble
+    400418: Window_Columns
     2300000: //RootNode
     2300002: Booth
     2300004: Clock
@@ -629,6 +633,8 @@ ModelImporter:
     2300410: Columns_001_cell_210
     2300412: Columns_001_cell_211
     2300414: Columns_001_cell_212
+    2300416: Columns_Rubble
+    2300418: Window_Columns
     3300000: //RootNode
     3300002: Booth
     3300004: Clock
@@ -837,6 +843,8 @@ ModelImporter:
     3300410: Columns_001_cell_210
     3300412: Columns_001_cell_211
     3300414: Columns_001_cell_212
+    3300416: Columns_Rubble
+    3300418: Window_Columns
     4300000: Cube
     4300002: Clock
     4300004: Window
@@ -1045,6 +1053,8 @@ ModelImporter:
     4300410: Columns_001_cell_001
     4300412: Columns_001_cell_000
     4300414: Columns_001_cell_075
+    4300416: Columns_Rubble
+    4300418: Window_Columns
     7400000: Default Take
     9500000: //RootNode
   materials:
