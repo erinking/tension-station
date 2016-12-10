@@ -26,7 +26,7 @@ SubShader {
 
 	void surf (Input IN, inout SurfaceOutput o) {
 		fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-		c.rgb += tex2D(_Detail,IN.uv_Detail).rgb * unity_ColorSpaceDouble.r * _DetailColor;
+		o.Emission = tex2D(_Detail,IN.uv_Detail).rgb * unity_ColorSpaceDouble.r * _DetailColor;
 		o.Albedo = c.rgb;
 		o.Alpha = c.a;
 	}
