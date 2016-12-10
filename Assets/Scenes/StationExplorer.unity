@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.015
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.5735294, g: 0.5735294, b: 0.5735294, a: 1}
+  m_AmbientSkyColor: {r: 0.13235295, g: 0.13235295, b: 0.13235295, a: 1}
   m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0
@@ -3675,6 +3675,34 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012213204090, guid: c5cf23fc4a0b942bfa2cfe2dcae2c395,
     type: 2}
   m_PrefabInternal: {fileID: 562043969}
+--- !u!1 &563359244 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 101308, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
+  m_PrefabInternal: {fileID: 1572545666}
+--- !u!65 &563359245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563359244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 3.35, z: -1.7}
+  m_Center: {x: -26.96, y: 8.6, z: -3.29}
+--- !u!64 &563359246
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563359244}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4301310, guid: e42f4d0dfa76c4a80be8b8919c7bcc08, type: 3}
 --- !u!1001 &565707500
 Prefab:
   m_ObjectHideFlags: 0
@@ -6966,11 +6994,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7
+      value: 5.85
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7002,15 +7030,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 458426798ec768a418345b71252b864c, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7736,7 +7764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1295346004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13824,7 +13852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1605080921
 MonoBehaviour:
   m_ObjectHideFlags: 0
