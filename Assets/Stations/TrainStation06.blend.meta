@@ -640,6 +640,40 @@ ModelImporter:
     101264: Rotunda_002_cell_045
     101266: Rotunda_002_cell_055
     101268: Rotunda_003
+    101270: Columns_Walls_Rubble
+    101272: Cots
+    101274: Empty1
+    101276: Empty2
+    101278: Empty3
+    101280: Empty4
+    101282: Entrance
+    101284: Entrance_Columns
+    101286: Exit
+    101288: Exit_Columns
+    101290: Exit_Ramp_1
+    101292: Exit_Ramp_2
+    101294: Exit_Rubble
+    101296: Exit_Rubble_Pillars
+    101298: Invisible_Doorway
+    101300: Rotunda_Broken_Column
+    101302: Rotunda_Column
+    101304: Rotunda_Column_Rubble_Large
+    101306: Rotunda_Column_Rubble_Small
+    101308: Shantytown
+    101310: Shantytown_Wall_Rubble
+    101312: Stairs
+    101314: Stairs_Lower_Banister
+    101316: Stairs_Lower_Rail
+    101318: Stairs_Upper_Banister
+    101320: Stairs_Upper_Rail
+    101322: Upper_Front_Banister
+    101324: Upper_Side_Banister
+    101326: Upper_Side_Rail
+    101328: Vine_Rod_1
+    101330: Vine_Rod_2
+    101332: Behind_Stairs_Rubble
+    101334: Entrance_Floor
+    101336: Exit_Floor
     400000: Columns_Walls
     400002: Columns_Walls_cell_000
     400004: Columns_Walls_cell_001
@@ -1275,6 +1309,40 @@ ModelImporter:
     401264: Rotunda_002_cell_045
     401266: Rotunda_002_cell_055
     401268: Rotunda_003
+    401270: Columns_Walls_Rubble
+    401272: Cots
+    401274: Empty1
+    401276: Empty2
+    401278: Empty3
+    401280: Empty4
+    401282: Entrance
+    401284: Entrance_Columns
+    401286: Exit
+    401288: Exit_Columns
+    401290: Exit_Ramp_1
+    401292: Exit_Ramp_2
+    401294: Exit_Rubble
+    401296: Exit_Rubble_Pillars
+    401298: Invisible_Doorway
+    401300: Rotunda_Broken_Column
+    401302: Rotunda_Column
+    401304: Rotunda_Column_Rubble_Large
+    401306: Rotunda_Column_Rubble_Small
+    401308: Shantytown
+    401310: Shantytown_Wall_Rubble
+    401312: Stairs
+    401314: Stairs_Lower_Banister
+    401316: Stairs_Lower_Rail
+    401318: Stairs_Upper_Banister
+    401320: Stairs_Upper_Rail
+    401322: Upper_Front_Banister
+    401324: Upper_Side_Banister
+    401326: Upper_Side_Rail
+    401328: Vine_Rod_1
+    401330: Vine_Rod_2
+    401332: Behind_Stairs_Rubble
+    401334: Entrance_Floor
+    401336: Exit_Floor
     2300000: Columns_Walls
     2300002: Columns_Walls_cell_000
     2300004: Columns_Walls_cell_001
@@ -1905,6 +1973,36 @@ ModelImporter:
     2301254: Rotunda_002_cell_045
     2301256: Rotunda_002_cell_055
     2301258: Rotunda_003
+    2301260: Columns_Walls_Rubble
+    2301262: Cots
+    2301264: Entrance
+    2301266: Entrance_Columns
+    2301268: Exit
+    2301270: Exit_Columns
+    2301272: Exit_Ramp_1
+    2301274: Exit_Ramp_2
+    2301276: Exit_Rubble
+    2301278: Exit_Rubble_Pillars
+    2301280: Invisible_Doorway
+    2301282: Rotunda_Broken_Column
+    2301284: Rotunda_Column
+    2301286: Rotunda_Column_Rubble_Large
+    2301288: Rotunda_Column_Rubble_Small
+    2301290: Shantytown
+    2301292: Shantytown_Wall_Rubble
+    2301294: Stairs
+    2301296: Stairs_Lower_Banister
+    2301298: Stairs_Lower_Rail
+    2301300: Stairs_Upper_Banister
+    2301302: Stairs_Upper_Rail
+    2301304: Upper_Front_Banister
+    2301306: Upper_Side_Banister
+    2301308: Upper_Side_Rail
+    2301310: Vine_Rod_1
+    2301312: Vine_Rod_2
+    2301314: Behind_Stairs_Rubble
+    2301316: Entrance_Floor
+    2301318: Exit_Floor
     3300000: Columns_Walls
     3300002: Columns_Walls_cell_000
     3300004: Columns_Walls_cell_001
@@ -2535,6 +2633,36 @@ ModelImporter:
     3301254: Rotunda_002_cell_045
     3301256: Rotunda_002_cell_055
     3301258: Rotunda_003
+    3301260: Columns_Walls_Rubble
+    3301262: Cots
+    3301264: Entrance
+    3301266: Entrance_Columns
+    3301268: Exit
+    3301270: Exit_Columns
+    3301272: Exit_Ramp_1
+    3301274: Exit_Ramp_2
+    3301276: Exit_Rubble
+    3301278: Exit_Rubble_Pillars
+    3301280: Invisible_Doorway
+    3301282: Rotunda_Broken_Column
+    3301284: Rotunda_Column
+    3301286: Rotunda_Column_Rubble_Large
+    3301288: Rotunda_Column_Rubble_Small
+    3301290: Shantytown
+    3301292: Shantytown_Wall_Rubble
+    3301294: Stairs
+    3301296: Stairs_Lower_Banister
+    3301298: Stairs_Lower_Rail
+    3301300: Stairs_Upper_Banister
+    3301302: Stairs_Upper_Rail
+    3301304: Upper_Front_Banister
+    3301306: Upper_Side_Banister
+    3301308: Upper_Side_Rail
+    3301310: Vine_Rod_1
+    3301312: Vine_Rod_2
+    3301314: Behind_Stairs_Rubble
+    3301316: Entrance_Floor
+    3301318: Exit_Floor
     4300000: Columns_Walls_cell_515
     4300002: Columns_Walls_cell_514
     4300004: Columns_Walls_cell_513
@@ -3165,6 +3293,36 @@ ModelImporter:
     4301254: Plane_028
     4301256: Cube_031
     4301258: Plane_029
+    4301260: Shantytown_Wall_Rubble
+    4301262: Rotunda_Broken_Column
+    4301264: Rotunda_Column_Rubble_Large
+    4301266: Vine_Rod_1
+    4301268: Invisible_Doorway
+    4301270: Exit_Ramp_1
+    4301272: Stairs
+    4301274: Entrance
+    4301276: Exit_Rubble
+    4301278: Rotunda_Column_Rubble_Small
+    4301280: Rotunda_Column
+    4301282: Upper_Front_Banister
+    4301284: Upper_Side_Rail
+    4301286: Stairs_Lower_Rail
+    4301288: Upper_Side_Banister
+    4301290: Stairs_Lower_Banister
+    4301292: Stairs_Upper_Banister
+    4301294: Stairs_Upper_Rail
+    4301296: Vine_Rod_2
+    4301298: Entrance_Columns
+    4301300: Columns_Walls_Rubble
+    4301302: Exit
+    4301304: Exit_Columns
+    4301306: Exit_Rubble_Pillars
+    4301308: Exit_Ramp_2
+    4301310: Shantytown
+    4301312: Cots
+    4301314: Behind_Stairs_Rubble
+    4301316: Exit_Floor
+    4301318: Entrance_Floor
     7400000: Default Take
     9500000: //RootNode
   materials:
