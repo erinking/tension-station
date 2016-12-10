@@ -39,7 +39,6 @@ public class PlayerMovementController : MonoBehaviour {
 		velocity = new Vector3();
 		StartCoroutine(DelayedInit());
 		playerAnimator = GetComponent<Animator> ();
-		flashlight = GetComponentInChildren<Light> ();
 
 		toFloor = new Ray (transform.position + Vector3.up, -1 * Vector3.up);
 		Physics.Raycast (toFloor, out hitInfo);
