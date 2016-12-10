@@ -61,6 +61,7 @@ ModelImporter:
     7400000: Walk
     7400002: cammina
     7400004: Idle
+    7400006: rip
     9500000: //RootNode
     13700000: donna
     13700002: donna_001
@@ -229,6 +230,82 @@ ModelImporter:
       - path: Armature/root/gamba_R/polpaccio_R/piede_R/avampiede_R
         weight: 1
       - path: donna
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: rip
+      takeName: Default Take
+      firstFrame: 67
+      lastFrame: 94.8
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/root
+        weight: 1
+      - path: Armature/root/bacino
+        weight: 1
+      - path: Armature/root/bacino/addome
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_L
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_L/avambraccio_L
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_L/avambraccio_L/mano_L
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_R
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_R/avambraccio_R
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/bicipite_R/avambraccio_R/mano_R
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/collo
+        weight: 1
+      - path: Armature/root/bacino/addome/schiena/collo/testa
+        weight: 1
+      - path: Armature/root/gamba_L
+        weight: 1
+      - path: Armature/root/gamba_L/polpaccio_L
+        weight: 1
+      - path: Armature/root/gamba_L/polpaccio_L/piede_L
+        weight: 1
+      - path: Armature/root/gamba_L/polpaccio_L/piede_L/avampiede_L
+        weight: 1
+      - path: Armature/root/gamba_R
+        weight: 1
+      - path: Armature/root/gamba_R/polpaccio_R
+        weight: 1
+      - path: Armature/root/gamba_R/polpaccio_R/piede_R
+        weight: 1
+      - path: Armature/root/gamba_R/polpaccio_R/piede_R/avampiede_R
+        weight: 1
+      - path: donna
+        weight: 1
+      - path: donna_001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}

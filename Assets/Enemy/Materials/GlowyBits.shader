@@ -4,6 +4,7 @@ Properties {
 	_DetailColor ("Detail Color", Color) = (1,1,1,1)
 	_MainTex ("Base (RGB)", 2D) = "white" {}
 	_Detail ("Detail (RGB)", 2D) = "gray" {}
+	_Cutoff ("Alpha Cutoff", Float) = 0.5
 }
 
 SubShader {
@@ -11,7 +12,7 @@ SubShader {
 	LOD 200
 
 	CGPROGRAM
-	#pragma surface surf Lambert alpha:fade
+	#pragma surface surf Lambert alphatest:_Cutoff
 
 	sampler2D _MainTex;
 	sampler2D _Detail;
