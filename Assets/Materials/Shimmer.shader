@@ -27,7 +27,7 @@ struct Input {
 void surf (Input IN, inout SurfaceOutput o) {
 	fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
 	float shimmerValue = IN.worldPos.y;// + (c.r + c.g + c.b);
-	float shimmer = saturate(sin(shimmerValue * 3.1415 * 2 + _Time.w * 2));
+	float shimmer = saturate(sin(shimmerValue * 3.1415 * 2 + _Time.w * 1));
 	half rim = 1 - saturate(dot (normalize(IN.viewDir), o.Normal));
 	o.Emission = _ShimmerColor * shimmer * pow(rim,4);
 	o.Albedo = c.rgb;
