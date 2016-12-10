@@ -1973,7 +1973,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011003084428, guid: 7e753cbe267d649f2b66050d24648fdc,
     type: 2}
   m_PrefabInternal: {fileID: 98739909}
---- !u!114 &316628274
+--- !u!114 &316628277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -5153,7 +5153,7 @@ Prefab:
     - target: {fileID: 2300002, guid: eb0aae96ee3654959a657e486cd978af, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2fcceccded679c041bbd105eab2c434c, type: 2}
+      objectReference: {fileID: 2100000, guid: a62c2d4255dc1544eb8d146690fa6023, type: 2}
     - target: {fileID: 2300006, guid: eb0aae96ee3654959a657e486cd978af, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5169,7 +5169,7 @@ Prefab:
     - target: {fileID: 2300004, guid: eb0aae96ee3654959a657e486cd978af, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2fcceccded679c041bbd105eab2c434c, type: 2}
+      objectReference: {fileID: 2100000, guid: a62c2d4255dc1544eb8d146690fa6023, type: 2}
     - target: {fileID: 2300418, guid: eb0aae96ee3654959a657e486cd978af, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
