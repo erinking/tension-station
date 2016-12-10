@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Rore_fern-c
-  m_Shader: {fileID: 14000, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: GEOM_TYPE_FROND _EMISSION
+  m_Name: MenuBackground
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -18,13 +18,7 @@ Material:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Detail
-      second:
-        m_Texture: {fileID: 2800000, guid: a14ad3826285247dfbb03bea03fbeaee, type: 3}
+        m_Texture: {fileID: 2800000, guid: fbcf021c5f50bd24cbe41780e59d027b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -46,22 +40,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
-        name: _DetailTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
         name: _EmissionMap
       second:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: a14ad3826285247dfbb03bea03fbeaee, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 4fd7d8b01792b324ba55aba32b8e7714, type: 3}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - first:
         name: _MetallicGlossMap
@@ -86,9 +74,6 @@ Material:
         name: _BumpScale
       second: 1
     - first:
-        name: _Cull
-      second: 0
-    - first:
         name: _Cutoff
       second: 0.5
     - first:
@@ -102,7 +87,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0.197
     - first:
         name: _GlossyReflections
       second: 1
@@ -117,7 +102,7 @@ Material:
       second: 1
     - first:
         name: _Parallax
-      second: 0.02
+      second: 0.005
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -131,9 +116,6 @@ Material:
         name: _UVSec
       second: 0
     - first:
-        name: _WindQuality
-      second: 0
-    - first:
         name: _ZWrite
       second: 1
     m_Colors:
@@ -141,11 +123,5 @@ Material:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
-        name: _DetailColor
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _HueVariation
-      second: {r: 1, g: 1, b: 1, a: 0.1}

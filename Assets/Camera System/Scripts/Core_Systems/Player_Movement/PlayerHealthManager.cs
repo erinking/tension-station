@@ -68,8 +68,11 @@ public class PlayerHealthManager : MonoBehaviour {
 		}
 
 		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.AUTO;
+		GetComponent<Animator> ().SetBool ("rip", true);
+
 		yield return new WaitForSeconds (3f);
 
+		GetComponent<Animator> ().SetBool ("rip", false);
 		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.WALKING;
 		transform.position = targetSpawnPoint.position;
 		lifeTime = MAX_LIFE_TIME;

@@ -12,6 +12,7 @@ public class InteractableNarrative : InteractableComponent{
 	private bool justInteracted = false;
 
 	void Start(){
+		text.fontSize = Screen.height / 20;
 		message = message.Replace ("\\", "\n");
 	}
 
