@@ -113,6 +113,6 @@ QualitySettings:
   m_PerPlatformDefaultQuality:
     Android: 1
     Standalone: 3
-    WebGL: 3
+    WebGL: 2
     iPhone: 1
     tvOS: 3

@@ -1,11 +1,7 @@
 fileFormatVersion: 2
-guid: 3541c2201760b48b3a22bf6839b567c1
-labels:
-- Architecture
-- Concrete
-- Ground
-- Pattern
-- Wall
+guid: 7342e39749bc64a32a71ef267f15b12d
+timeCreated: 1481416828
+licenseType: Free
 NativeFormatImporter:
   userData: 
   assetBundleName: 
