@@ -16,7 +16,7 @@ public class LanternMaterialDim : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		Color col = Color.Lerp (rend.material.GetColor ("_EmissionColor"), controlLight.enabled ? litColor : Color.black, 0.2f);
+		Color col = Color.Lerp (rend.material.GetColor ("_EmissionColor"), controlLight.enabled ? litColor : litColor * 0.2f, 0.2f);
 		rend.material.SetColor ("_EmissionColor", col);
 	}
 }
