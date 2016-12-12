@@ -5311,6 +5311,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ecf2ea72fe7fdc4cbd33a401b08c78d, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &597897284 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+  m_PrefabInternal: {fileID: 1826806765}
 --- !u!1 &601016303
 GameObject:
   m_ObjectHideFlags: 0
@@ -5514,8 +5518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d046e94fb7ef44698fef2ece76dd3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "A small child\u2019s doll, dirty and torn. With a jolt you recognize it
-    as your little brother\u2019s."
+  message: "A small child\u2019s doll, dirty and torn. With a jolt, you recognize
+    it as your little brother\u2019s."
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
 --- !u!1001 &609318494
@@ -18709,6 +18713,7 @@ Transform:
   - {fileID: 659506749}
   - {fileID: 606221432}
   - {fileID: 753149758}
+  - {fileID: 1975228234}
   m_Father: {fileID: 0}
   m_RootOrder: 16
 --- !u!1 &1659481680
@@ -20678,6 +20683,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1927893068}
   m_RootOrder: 0
+--- !u!1001 &1826806765
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1975228234}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.758
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6846553
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.17635764
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.17629917
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.68488234
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -89.981
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 28.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61bf057c54d50ce409f7167d89eb7d08, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 33ce7a6c07021c94d882058f80bcb392, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1832224796
 GameObject:
   m_ObjectHideFlags: 0
@@ -21661,6 +21736,74 @@ Transform:
   - {fileID: 735871166}
   m_Father: {fileID: 1510720319}
   m_RootOrder: 10
+--- !u!1 &1975228233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1975228234}
+  - 33: {fileID: 1975228237}
+  - 65: {fileID: 1975228236}
+  - 114: {fileID: 1975228235}
+  m_Layer: 8
+  m_Name: NoteFromDad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 1
+  m_IsActive: 1
+--- !u!4 &1975228234
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975228233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.4507017, y: 11.261391, z: -22.298073}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 597897284}
+  m_Father: {fileID: 1647957645}
+  m_RootOrder: 5
+--- !u!114 &1975228235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975228233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d046e94fb7ef44698fef2ece76dd3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: "A note with with your father\u2019s writing: \\Should anyone find this
+    communication, know that the Esperfell farms were attacked by the overgrowth.
+    The lowlands outside the city are not safe. We will travel south, away from the
+    city hoping to find shelter. "
+  text: {fileID: 1325890112}
+  mask: {fileID: 2000210108}
+--- !u!65 &1975228236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975228233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1975228237
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975228233}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1975879813
 GameObject:
   m_ObjectHideFlags: 0
