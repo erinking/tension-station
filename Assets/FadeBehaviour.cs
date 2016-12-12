@@ -8,8 +8,8 @@ public class FadeBehaviour : MonoBehaviour
 
 	public Texture fadeOutTexture;
 	private int drawDepth = -1000;
-	private float alpha = 1.0f;
-	private float fadeDir = -1.0f;
+	public float alpha = .99f;
+	public float fadeDir = -1.0f;
 	private Color alphaColor;
 
 	// Use this for initialization
@@ -37,10 +37,5 @@ public class FadeBehaviour : MonoBehaviour
 	public void FadeOut()
 	{
 		fadeDir = 1;
-	}
-
-	void Start()
-	{
-		alpha = 0;
 	}
 }

@@ -12342,7 +12342,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1377666788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -47.28657, y: 0.22, z: 46.968}
+  m_LocalPosition: {x: -47.28657, y: 0.22, z: 44.904}
   m_LocalScale: {x: 10.380389, y: 1, z: 3.6792693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -20693,6 +20693,7 @@ GameObject:
   - 114: {fileID: 1832224799}
   - 114: {fileID: 1832224798}
   - 114: {fileID: 1832224804}
+  - 114: {fileID: 1832224805}
   m_Layer: 0
   m_Name: StartingCam
   m_TagString: MainCamera
@@ -20820,6 +20821,21 @@ MonoBehaviour:
   adaptionSpeed: 1.5
   tonemapper: {fileID: 4800000, guid: 003377fc2620a44939dadde6fe3f8190, type: 3}
   validRenderTextureFormat: 1
+--- !u!114 &1832224805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1832224796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe1da33d1f7c934ea6442d7bfe4129c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 0.3
+  fadeOutTexture: {fileID: 2800000, guid: c7e3217b3eac1454eb9cedbb999a7a95, type: 3}
+  alpha: 0.99
+  fadeDir: -1
 --- !u!4 &1832517377 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012795037362, guid: 2ecf2ea72fe7fdc4cbd33a401b08c78d,
@@ -21800,6 +21816,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeSpeed: 0.3
   fadeOutTexture: {fileID: 2800000, guid: c7e3217b3eac1454eb9cedbb999a7a95, type: 3}
+  alpha: 0
+  fadeDir: -1
 --- !u!4 &1978551892 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012795037362, guid: 2ecf2ea72fe7fdc4cbd33a401b08c78d,
