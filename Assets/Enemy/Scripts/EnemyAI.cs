@@ -18,6 +18,7 @@ public class EnemyAI : MonoBehaviour {
 	private float endChaseTimer;
 	private float patrolTimer;
 	private int waypointIndex = 0;
+	private AudioSource myAudioSrc;
 
 	void Awake()
 	{
@@ -26,6 +27,7 @@ public class EnemyAI : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerMov = player.GetComponent<PlayerMovementController> ();
 		phm = player.GetComponent<PlayerHealthManager> ();
+		myAudioSrc = GetComponent<AudioSource> ();
 	}
 
 	void Update()
@@ -47,6 +49,8 @@ public class EnemyAI : MonoBehaviour {
 
 	void Chase()
 	{
+		myAudioSrc.volume = 1.0f;
+
 		Vector3 vecToPlayer = player.transform.position - transform.position;
 
 		nav.speed = chaseSpeed;
@@ -77,6 +81,7 @@ public class EnemyAI : MonoBehaviour {
 
 	void Patrol()
 	{
+		myAudioSrc.volume = 0.3f;
 		nav.speed = walkSpeed;
 		if (nav.destination == enemyVision.resetLoc || nav.remainingDistance < nav.stoppingDistance)
 		{
