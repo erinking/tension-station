@@ -7,6 +7,7 @@ public class Vines : MonoBehaviour {
 	public float spread = 30;
 	public float hang = 10;
 	public float startPosition = 1; //0 = start at anchor1, 1 = start at anchor2
+	public float activationDistance = 25f; //distance at which vines respond to their current target
 	public Transform anchor1;
 	public Transform anchor2;
 	public Light target;
@@ -56,7 +57,8 @@ public class Vines : MonoBehaviour {
 		//**** Movement code ****
 		Vector3 lineVector = (anchor2.position - anchor1.position).normalized;
 		Light currentTarget = (overrideTarget != null && overrideTarget.enabled) ? overrideTarget : target;
-		if (currentTarget.enabled) {
+		float distToTarget = Vector3.Distance (transform.position, currentTarget.gameObject.transform.position);
+		if (currentTarget.enabled && distToTarget < activationDistance) {
 			center = anchor1.position + Mathf.Clamp (Vector3.Dot (currentTarget.transform.position - anchor1.position, lineVector), spread * 0.5f, Vector3.Distance (anchor1.position, anchor2.position) - spread * 0.5f) * lineVector;
 		}
 		transform.position = center;
@@ -85,7 +87,7 @@ public class Vines : MonoBehaviour {
 
 		//**** Light Changes ****
 		matInstance.SetColor("_DetailColor",
-			Color.Lerp (matInstance.GetColor("_DetailColor"), currentTarget.enabled ? glowColor : Color.black, 0.1f)
+			Color.Lerp (matInstance.GetColor("_DetailColor"), (currentTarget.enabled && distToTarget < activationDistance) ? glowColor : Color.black, 0.1f)
 		);
 		matInstance.SetTextureOffset ("_Detail", new Vector2(Time.time * 0.1f, 0));
 	}
