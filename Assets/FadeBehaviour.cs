@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class FadeBehaviour : MonoBehaviour 
 {
@@ -21,6 +22,11 @@ public class FadeBehaviour : MonoBehaviour
 		GUI.color = alphaColor;
 		GUI.depth = drawDepth;
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), fadeOutTexture);
+
+		if (alpha == 1)
+		{
+			SceneManager.LoadScene (1);
+		}
 	}
 	
 	public void FadeIn()
