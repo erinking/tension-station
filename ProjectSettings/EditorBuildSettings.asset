@@ -34,6 +34,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Camera System/scene2.unity
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+  - enabled: 1
     path: Assets/Scenes/StationExplorer.unity
   - enabled: 1
     path: Assets/Scenes/Credits.unity
