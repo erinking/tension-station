@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour {
 		if (timeBuffer > 0) {
 			timeBuffer -= Time.deltaTime;
 		} else {
-			if (vert != 0) {
+			if (Mathf.Abs(vert) > 0.2f) {
 				timeBuffer = 0.2f;
 				currentTarget += vert < 0 ? 1 : menuTargets.Length - 1;
 				currentTarget = currentTarget % menuTargets.Length;
