@@ -21,7 +21,8 @@ public class CreditsBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.transform.Translate (0, -Input.GetAxis ("Vertical") * Time.deltaTime * 200, 0);
+		float inputVert = Input.GetAxis ("Vertical") + Input.GetAxis ("VerticalController");
+		text.transform.Translate (0, -inputVert * Time.deltaTime * 200, 0);
 
 		if (fadeOut) {
 			currentFade += Time.deltaTime / fadeTime;
