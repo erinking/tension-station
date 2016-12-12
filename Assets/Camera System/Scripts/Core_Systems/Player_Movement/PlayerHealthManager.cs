@@ -4,9 +4,10 @@ using System.Collections;
 public class PlayerHealthManager : MonoBehaviour {
 
 	private float lifeTime;
-	public const float MAX_LIFE_TIME = 2.0f;
+	public const float MAX_LIFE_TIME = 0.01f;
 	public Transform[] checkpoints;
 	public bool[] actives;
+	public GameObject[] enemies;
 
 	private bool recentDamage = false;
 	private bool isDying = false;
@@ -68,11 +69,23 @@ public class PlayerHealthManager : MonoBehaviour {
 		}
 
 		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.AUTO;
-		yield return new WaitForSeconds (3f);
+		GetComponent<Animator> ().SetBool ("rip", true);
 
+		yield return new WaitForSeconds (3f);
+		GetComponent<PlayerMovementController> ().flashlight.enabled = false;
+
+		GetComponent<Animator> ().SetBool ("rip", false);
 		GetComponent<PlayerMovementController> ().curState = PlayerMovementController.state.WALKING;
 		transform.position = targetSpawnPoint.position;
 		lifeTime = MAX_LIFE_TIME;
+
+		for (int i = 0; i < enemies.Length; i++)
+		{
+			EnemyAI enemyAI = enemies [i].GetComponent<EnemyAI> ();
+			enemies [i].transform.position = enemyAI.waypoints [0].position;
+			enemyAI.nav.destination = enemyAI.waypoints [0].position;
+		}
+
 		recentDamage = false;
 		isDying = false;
 	}

@@ -674,6 +674,12 @@ ModelImporter:
     101332: Behind_Stairs_Rubble
     101334: Entrance_Floor
     101336: Exit_Floor
+    101338: Columns_Walls_Columns_Rubble
+    101340: Columns_Walls_Walls_Rubble
+    101342: Exit_Column_Rubble
+    101344: Rotunda_Column_Rubble
+    101346: Rotunda_Rubble_Large
+    101348: Rotunda_Rubble_Small
     400000: Columns_Walls
     400002: Columns_Walls_cell_000
     400004: Columns_Walls_cell_001
@@ -1343,6 +1349,12 @@ ModelImporter:
     401332: Behind_Stairs_Rubble
     401334: Entrance_Floor
     401336: Exit_Floor
+    401338: Columns_Walls_Columns_Rubble
+    401340: Columns_Walls_Walls_Rubble
+    401342: Exit_Column_Rubble
+    401344: Rotunda_Column_Rubble
+    401346: Rotunda_Rubble_Large
+    401348: Rotunda_Rubble_Small
     2300000: Columns_Walls
     2300002: Columns_Walls_cell_000
     2300004: Columns_Walls_cell_001
@@ -2003,6 +2015,12 @@ ModelImporter:
     2301314: Behind_Stairs_Rubble
     2301316: Entrance_Floor
     2301318: Exit_Floor
+    2301320: Columns_Walls_Columns_Rubble
+    2301322: Columns_Walls_Walls_Rubble
+    2301324: Exit_Column_Rubble
+    2301326: Rotunda_Column_Rubble
+    2301328: Rotunda_Rubble_Large
+    2301330: Rotunda_Rubble_Small
     3300000: Columns_Walls
     3300002: Columns_Walls_cell_000
     3300004: Columns_Walls_cell_001
@@ -2663,6 +2681,12 @@ ModelImporter:
     3301314: Behind_Stairs_Rubble
     3301316: Entrance_Floor
     3301318: Exit_Floor
+    3301320: Columns_Walls_Columns_Rubble
+    3301322: Columns_Walls_Walls_Rubble
+    3301324: Exit_Column_Rubble
+    3301326: Rotunda_Column_Rubble
+    3301328: Rotunda_Rubble_Large
+    3301330: Rotunda_Rubble_Small
     4300000: Columns_Walls_cell_515
     4300002: Columns_Walls_cell_514
     4300004: Columns_Walls_cell_513
@@ -3323,6 +3347,12 @@ ModelImporter:
     4301314: Behind_Stairs_Rubble
     4301316: Exit_Floor
     4301318: Entrance_Floor
+    4301320: Columns_Walls_Columns_Rubble
+    4301322: Exit_Column_Rubble
+    4301324: Rotunda_Column_Rubble
+    4301326: Rotunda_Rubble_Large
+    4301328: Rotunda_Rubble_Small
+    4301330: Columns_Walls_Walls_Rubble
     7400000: Default Take
     9500000: //RootNode
   materials:

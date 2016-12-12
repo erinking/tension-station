@@ -26,6 +26,10 @@ public class MonsterMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (vision == null) {
+			tendrilMaterialInstance.SetColor ("_DetailColor", glowColor);
+			return;
+		}
 		tendrilMaterialInstance.SetColor("_DetailColor",
 			Color.Lerp (tendrilMaterialInstance.GetColor("_DetailColor"), vision.canSeePlayer ? glowColor : Color.black, 0.1f)
 		);
