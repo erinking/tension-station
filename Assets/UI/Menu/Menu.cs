@@ -17,7 +17,7 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float vert = Input.GetAxis ("Vertical");
+		float vert = Input.GetAxis ("Vertical") + Input.GetAxis ("VerticalController");
 		if (vert == 0) {
 			timeBuffer = 0;
 		}
