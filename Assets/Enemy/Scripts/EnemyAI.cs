@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour {
 	public float slowDist = 3f;
 
 	private EnemyVision enemyVision;
-	private NavMeshAgent nav;
+	public NavMeshAgent nav;
 	private GameObject player;
 	private PlayerHealthManager phm;
 	private PlayerMovementController playerMov;

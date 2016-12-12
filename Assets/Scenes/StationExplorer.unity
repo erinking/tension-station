@@ -9439,6 +9439,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114000012137982348, guid: eab10438a022d4c079533db9761304b8,
         type: 2}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012137982348, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
       propertyPath: checkpoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -9529,6 +9534,16 @@ Prefab:
       propertyPath: controlLight
       value: 
       objectReference: {fileID: 1760548811}
+    - target: {fileID: 114000012137982348, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1711096852}
+    - target: {fileID: 114000012137982348, guid: eab10438a022d4c079533db9761304b8,
+        type: 2}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 800037425}
     m_RemovedComponents:
     - {fileID: 114000013661619582, guid: eab10438a022d4c079533db9761304b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: eab10438a022d4c079533db9761304b8, type: 2}
