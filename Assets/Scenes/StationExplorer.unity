@@ -9493,7 +9493,7 @@ Prefab:
         type: 2}
       propertyPath: checkpoints.Array.data[1]
       value: 
-      objectReference: {fileID: 1986072266}
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
         type: 2}
       propertyPath: flashlight
@@ -21133,6 +21133,60 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 5, z: 20}
   m_Center: {x: -42.43, y: 1.39, z: 40.82}
+--- !u!1 &1888919451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1888919454}
+  - 65: {fileID: 1888919453}
+  - 114: {fileID: 1888919452}
+  m_Layer: 0
+  m_Name: End Game Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1888919452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888919451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d89fa924303d77644ae05ee20128fa3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endCam: {fileID: 1975879814}
+--- !u!65 &1888919453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888919451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1888919454
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888919451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -46.81, y: 0.897, z: -31.03}
+  m_LocalScale: {x: 11.17, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
 --- !u!1 &1900325010 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011752323180, guid: 845bc6c5d1a7df442bb1f3fafd0bf26e,
@@ -21443,7 +21497,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 429483158}
-  - {fileID: 1986072266}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &1927893067
@@ -21607,6 +21660,7 @@ GameObject:
   - 114: {fileID: 1975879817}
   - 114: {fileID: 1975879816}
   - 114: {fileID: 1975879815}
+  - 114: {fileID: 1975879822}
   m_Layer: 0
   m_Name: EndingCam
   m_TagString: Camera
@@ -21733,6 +21787,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 939674972}
   m_RootOrder: 17
+--- !u!114 &1975879822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975879813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe1da33d1f7c934ea6442d7bfe4129c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSpeed: 0.3
+  fadeOutTexture: {fileID: 2800000, guid: c7e3217b3eac1454eb9cedbb999a7a95, type: 3}
 --- !u!4 &1978551892 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012795037362, guid: 2ecf2ea72fe7fdc4cbd33a401b08c78d,
@@ -21784,60 +21851,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010762436508, guid: b081e65e4e2801b4bbbaa47494776c9b,
     type: 2}
   m_PrefabInternal: {fileID: 634387200}
---- !u!1 &1986072265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1986072266}
-  - 65: {fileID: 1986072268}
-  - 114: {fileID: 1986072267}
-  m_Layer: 2
-  m_Name: Midpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1986072266
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1986072265}
-  m_LocalRotation: {x: 0, y: -0.4804531, z: 0, w: 0.8770204}
-  m_LocalPosition: {x: -27.39, y: -0.28, z: -9.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -57.43, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1926607105}
-  m_RootOrder: 1
---- !u!114 &1986072267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1986072265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d717466943eb52348b8d2c00e2a7b3e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointIndex: 1
---- !u!65 &1986072268
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1986072265}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.08, y: 7.84, z: 4.39}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2000210108
 GameObject:
   m_ObjectHideFlags: 0
