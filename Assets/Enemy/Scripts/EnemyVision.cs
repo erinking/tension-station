@@ -4,12 +4,13 @@ using System.Collections;
 public class EnemyVision : MonoBehaviour {
 
 	public bool canSeePlayer;
+	public float distToPlayer;
 	public Vector3 lastSightingLoc;
 
 	private GameObject player;
 	private SphereCollider visionVolume;
 	private NavMeshAgent nav;
-	private PlayerMovementController playerMov;
+	public PlayerMovementController playerMov;
 	[HideInInspector]
 	public Vector3 resetLoc;
 
@@ -24,11 +25,21 @@ public class EnemyVision : MonoBehaviour {
 		lastSightingLoc = resetLoc;
 	}
 
+	void Update()
+	{
+		distToPlayer = Vector3.Magnitude (transform.position - player.transform.position);
+	}
+
 	void OnTriggerStay(Collider other)
 	{
 		if (other.gameObject == player) 
 		{
 			canSeePlayer = false;
+
+			if (distToPlayer < 1) 
+			{
+				canSeePlayer = true;
+			}
 
 			Vector3 dir = other.transform.position - transform.position;
 

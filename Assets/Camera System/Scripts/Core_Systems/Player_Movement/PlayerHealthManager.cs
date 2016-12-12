@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealthManager : MonoBehaviour {
 
 	private float lifeTime;
-	public const float MAX_LIFE_TIME = 2.0f;
+	public const float MAX_LIFE_TIME = 0.01f;
 	public Transform[] checkpoints;
 	public bool[] actives;
 

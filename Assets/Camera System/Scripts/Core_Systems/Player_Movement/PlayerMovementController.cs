@@ -19,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour {
 	private Rigidbody rb;
 	private float curSprint;
 	[HideInInspector]
+	public float curSpeed;
 	public Camera curMoveSpaceCamera;
 	private Vector2 inputVec;
 	private Vector3 velocity;
@@ -44,6 +45,7 @@ public class PlayerMovementController : MonoBehaviour {
 		Physics.Raycast (toFloor, out hitInfo);
 		targetHeight = hitInfo.distance;
 		curState = state.WALKING;
+		curSpeed = speed;
 		walkingSound = GetComponent<AudioSource> ();
 	}
 
@@ -96,7 +98,7 @@ public class PlayerMovementController : MonoBehaviour {
 			//project it onto the x-z plane (the dot product is with [1,0,1], so we can just set y to zero
 			velocity.y = 0f;
 			//and finally, normalize and set to our defined speed
-			velocity = useController ? velocity * speed : velocity.normalized * speed;
+			velocity = useController ? velocity * curSpeed : velocity.normalized * curSpeed;
 
 			if (PlayerInput.GetButton ("Sprint") && canSprint) 
 			{

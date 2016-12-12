@@ -8,11 +8,13 @@ public class EnemyAI : MonoBehaviour {
 	public float chaseTimeout;
 	public float[] patrolWaitTimes;
 	public Transform[] waypoints;
+	public float slowDist = 3f;
 
 	private EnemyVision enemyVision;
 	private NavMeshAgent nav;
 	private GameObject player;
 	private PlayerHealthManager phm;
+	private PlayerMovementController playerMov;
 	private float endChaseTimer;
 	private float patrolTimer;
 	private int waypointIndex = 0;
@@ -22,6 +24,7 @@ public class EnemyAI : MonoBehaviour {
 		enemyVision = GetComponent<EnemyVision> ();
 		nav = GetComponent<NavMeshAgent> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
+		playerMov = player.GetComponent<PlayerMovementController> ();
 		phm = player.GetComponent<PlayerHealthManager> ();
 	}
 
@@ -34,6 +37,11 @@ public class EnemyAI : MonoBehaviour {
 		else
 		{
 			Patrol ();
+		}
+
+		if (enemyVision.distToPlayer > slowDist) 
+		{
+			playerMov.curSpeed = playerMov.speed;
 		}
 	}
 
@@ -55,6 +63,11 @@ public class EnemyAI : MonoBehaviour {
 				endChaseTimer = 0f;
 			}
 		}
+
+		if (enemyVision.distToPlayer < slowDist) 
+		{
+			playerMov.curSpeed = playerMov.speed * (enemyVision.distToPlayer / slowDist);	
+		} 
 
 		if (Vector3.SqrMagnitude (vecToPlayer) < 2 && enemyVision.canSeePlayer)
 		{
