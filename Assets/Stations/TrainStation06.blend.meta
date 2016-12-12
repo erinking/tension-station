@@ -680,6 +680,8 @@ ModelImporter:
     101344: Rotunda_Column_Rubble
     101346: Rotunda_Rubble_Large
     101348: Rotunda_Rubble_Small
+    101350: Rotunda_Exit_Wall
+    101352: Exit_Floor_001
     400000: Columns_Walls
     400002: Columns_Walls_cell_000
     400004: Columns_Walls_cell_001
@@ -1355,6 +1357,8 @@ ModelImporter:
     401344: Rotunda_Column_Rubble
     401346: Rotunda_Rubble_Large
     401348: Rotunda_Rubble_Small
+    401350: Rotunda_Exit_Wall
+    401352: Exit_Floor_001
     2300000: Columns_Walls
     2300002: Columns_Walls_cell_000
     2300004: Columns_Walls_cell_001
@@ -2021,6 +2025,8 @@ ModelImporter:
     2301326: Rotunda_Column_Rubble
     2301328: Rotunda_Rubble_Large
     2301330: Rotunda_Rubble_Small
+    2301332: Rotunda_Exit_Wall
+    2301334: Exit_Floor_001
     3300000: Columns_Walls
     3300002: Columns_Walls_cell_000
     3300004: Columns_Walls_cell_001
@@ -2687,6 +2693,8 @@ ModelImporter:
     3301326: Rotunda_Column_Rubble
     3301328: Rotunda_Rubble_Large
     3301330: Rotunda_Rubble_Small
+    3301332: Rotunda_Exit_Wall
+    3301334: Exit_Floor_001
     4300000: Columns_Walls_cell_515
     4300002: Columns_Walls_cell_514
     4300004: Columns_Walls_cell_513
@@ -3353,6 +3361,8 @@ ModelImporter:
     4301326: Rotunda_Rubble_Large
     4301328: Rotunda_Rubble_Small
     4301330: Columns_Walls_Walls_Rubble
+    4301332: Rotunda_Exit_Wall
+    4301334: Exit_Floor_001
     7400000: Default Take
     9500000: //RootNode
   materials:
