@@ -17,14 +17,14 @@ public class Menu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float vert = Input.GetAxis ("Vertical") + Input.GetAxis ("VerticalController");
+		float vert = Input.GetAxis ("Vertical") * 1000 + Input.GetAxis ("VerticalController");
 		if (vert == 0) {
 			timeBuffer = 0;
 		}
 		if (timeBuffer > 0) {
 			timeBuffer -= Time.deltaTime;
 		} else {
-			if (Mathf.Abs(vert) > 0.2f) {
+			if (Mathf.Abs(vert) > 0.5f) {
 				timeBuffer = 0.2f;
 				currentTarget += vert < 0 ? 1 : menuTargets.Length - 1;
 				currentTarget = currentTarget % menuTargets.Length;

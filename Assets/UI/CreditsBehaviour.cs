@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CreditsBehaviour : MonoBehaviour {
 
@@ -22,12 +23,15 @@ public class CreditsBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float inputVert = Input.GetAxis ("Vertical") + Input.GetAxis ("VerticalController");
-		text.transform.Translate (0, -inputVert * Time.deltaTime * 200, 0);
+
+		if (Mathf.Abs(inputVert) > 0.2f) {
+			text.transform.Translate (0, -inputVert * Time.deltaTime * 200, 0);
+		}
 
 		if (fadeOut) {
 			currentFade += Time.deltaTime / fadeTime;
 			if (currentFade >= 1) {
-				Application.LoadLevel (nextLevel);
+				SceneManager.LoadScene (nextLevel);
 			}
 		} else if(currentFade > 0) {
 			currentFade -= Time.deltaTime / fadeTime;

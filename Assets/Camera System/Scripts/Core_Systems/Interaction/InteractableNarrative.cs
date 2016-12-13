@@ -7,6 +7,7 @@ public class InteractableNarrative : InteractableComponent{
 	public string message;
 	public Text text;
 	public GameObject mask;
+	public PlayerMovementController playerMove;
 
 	private bool isDisplayingText = false;
 	private bool justInteracted = false;
@@ -14,10 +15,11 @@ public class InteractableNarrative : InteractableComponent{
 	void Start(){
 		text.fontSize = Screen.height / 20;
 		message = message.Replace ("\\", "\n");
+		playerMove = FindObjectOfType<PlayerMovementController> ();
 	}
 
 	void LateUpdate(){
-		if (isDisplayingText && !justInteracted && Input.anyKeyDown) {
+		if (isDisplayingText && !justInteracted && (Input.anyKeyDown || playerMove.isMoving)){
 			KillText ();
 			isDisplayingText = false;
 		}

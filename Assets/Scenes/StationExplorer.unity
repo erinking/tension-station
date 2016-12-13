@@ -2213,9 +2213,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11454396, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11454396, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &251150126 stripped
@@ -4796,6 +4797,7 @@ MonoBehaviour:
     of Eastburg.
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
+  playerMove: {fileID: 0}
 --- !u!4 &536138683 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010762436508, guid: b081e65e4e2801b4bbbaa47494776c9b,
@@ -5546,6 +5548,7 @@ MonoBehaviour:
     it as your little brother\u2019s."
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
+  playerMove: {fileID: 0}
 --- !u!1001 &609318494
 Prefab:
   m_ObjectHideFlags: 0
@@ -6090,6 +6093,7 @@ MonoBehaviour:
     Valley to be evacuated\Date: 11/1/223'
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
+  playerMove: {fileID: 0}
 --- !u!1 &668348783
 GameObject:
   m_ObjectHideFlags: 0
@@ -6615,9 +6619,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: Entry 192. Date 9/21/288. It has been a week since the attack and the surviving
     Westerfell farmers and I made camp in the train station four days ago. I will
-    stay with them and intercept any communication from Westerfell.
+    stay with them and intercept any communication from Esperfell.
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
+  playerMove: {fileID: 0}
 --- !u!1001 &756573814
 Prefab:
   m_ObjectHideFlags: 0
@@ -8002,9 +8007,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11471830, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8295348, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11471830, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &828334464
@@ -21813,6 +21823,7 @@ MonoBehaviour:
     city hoping to find shelter. "
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
+  playerMove: {fileID: 0}
 --- !u!65 &1975228236
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class PlayerMovementController : MonoBehaviour {
 	private float curSprint;
 	[HideInInspector]
 	public float curSpeed;
+	public bool isMoving = false;
 	public Camera curMoveSpaceCamera;
 	private Vector2 inputVec;
 	private Vector3 velocity;
@@ -74,9 +75,11 @@ public class PlayerMovementController : MonoBehaviour {
 		}
 
 		//Footstep sound logic
-		if (inputVec.sqrMagnitude>0 && !walkingSound.isPlaying) {
+		if (velocity.sqrMagnitude>0 && !isMoving) {
+			isMoving = true;
 			walkingSound.Play ();
-		}else if (inputVec.sqrMagnitude==0 && walkingSound.isPlaying) {
+		}else if (velocity.sqrMagnitude==0 && isMoving) {
+			isMoving = false;
 			walkingSound.Stop ();
 		}
 
