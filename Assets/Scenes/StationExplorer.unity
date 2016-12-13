@@ -4793,8 +4793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d046e94fb7ef44698fef2ece76dd3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: A nearly decomposed body in a lab coat. You notice a small emblem indicative
-    of Eastburg.
+  message: A dead body in a lab coat. You notice a small emblem indicative of Eastburg.
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
   playerMove: {fileID: 0}
@@ -6090,7 +6089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: 'Headline reads: War Front Advances!\Officials say all stations in the
-    Valley to be evacuated\Date: 11/1/223'
+    Valley to be evacuated.\Date: 11/1/223'
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
   playerMove: {fileID: 0}
@@ -6618,8 +6617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: Entry 192. Date 9/21/288. It has been a week since the attack and the surviving
-    Westerfell farmers and I made camp in the train station four days ago. I will
-    stay with them and intercept any communication from Esperfell.
+    Esperfell farmers and I made camp in the train station four days ago. I will stay
+    with them and intercept any communication from Eastburg.
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
   playerMove: {fileID: 0}
@@ -21818,9 +21817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: "A note with with your father\u2019s writing: \\Should anyone find this
-    communication, know that the Esperfell farms were attacked by the overgrowth.
-    The lowlands outside the city are not safe. We will travel south, away from the
-    city hoping to find shelter. "
+    communication, know that the Esperfell farms were attacked by the Overgrowth.
+    The lowlands outside the city are not safe. We will travel south away from the
+    city, hoping to find shelter."
   text: {fileID: 1325890112}
   mask: {fileID: 2000210108}
   playerMove: {fileID: 0}

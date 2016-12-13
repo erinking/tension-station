@@ -268,7 +268,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\n\n\nDevelopers: Lucas Coelho, Erin King, David Perera, Loren Sherman\n\nFrom
-    Unity Asset Store:\nTextures\nwalls, wall rubble: \u201Cwall08b\u201D by A dog\u2019s
+    Unity Asset Store:\n\nTextures\nwalls, wall rubble: \u201Cwall08b\u201D by A dog\u2019s
     life software\nchasm: modified \u201Cconcrete pattern 03\u201D by Nobiax / Yughues\ncolumns,
     column rubble, handrails: \u201CStone pattern 03\u201D by Nobiax / Yughues\nfountain,
     arch, banisters: \u201CStone pattern 13\u201D by Nobiax / Yughues\nmossy rubble:
@@ -277,17 +277,17 @@ MonoBehaviour:
     by Nobiax / Yughues\ngirders: \u201CWooden floor 04\u201D by Nobiax / Yughues\nshantytown:
     \u201CWooden floor 05\u201D by Nobiax / Yughues\nstairs, cots, ticket booth boarded
     windows: \u201CWooden floor 07\u201D by Nobiax / Yughues\nticket booth wood: \u201CWooden
-    floor 09\u201D by Nobiax / Yughues\nProps\nticket booth clock: \u201CClock\u201D
-    by Webcadabra\njournal: \u201Cbook_0001a\u201D by VIS Games\nOther\nlantern flickering
-    script: modified \u201CFlickering Light Effect\u201D by Dream Reaper Studios\nskybox:
-    adapted from Unity Essentials\u2019 \u201CThe Courtyard\u201D\n\nModels from BlenderSwap.com
-    (attribution not required):\ndecorative plants and vines\nscientist body\nteddy
-    bear\nplayer character model (modified & retextured)\n\nAudio:\nplant rustling
-    noise: https://freesound.org/people/duckduckpony/sounds/204030/\nfootsteps and
-    ambience from Final Cut Pro sound effects library\n\nVolumetric lighting: github.com/SlightlyMad/VolumetricLights,
-    Copyright (c) 2016, Michal Skalsky\n\ntrain schedule board font: \u201CCharcoal\u201D
-    by Jonathan Harris, Copyright \xA9 2015 TattooWoo.com\n\nConcept Art/Sketches
-    by Lin Pease\nCamera System adapted from design by David Bocek and David Perera\n\nThank
+    floor 09\u201D by Nobiax / Yughues\n\nProps\nticket booth clock: \u201CClock\u201D
+    by Webcadabra\njournal: \u201Cbook_0001a\u201D by VIS Games\n\nOther\nlantern
+    flickering script: modified \u201CFlickering Light Effect\u201D by Dream Reaper
+    Studios\nskybox: adapted from Unity Essentials\u2019 \u201CThe Courtyard\u201D\n\n\nModels
+    from BlenderSwap.com (attribution not required):\ndecorative plants and vines\nscientist
+    body\nteddy bear\nplayer character model (modified & retextured)\n\n\nAudio:\nplant
+    rustling noise: https://freesound.org/people/duckduckpony/sounds/204030/\nfootsteps
+    and ambience from Final Cut Pro sound effects library\n\n\nVolumetric lighting:\ngithub.com/SlightlyMad/VolumetricLights,
+    Copyright (c) 2016, Michal Skalsky\n\n\ntrain schedule board font: \u201CCharcoal\u201D
+    by Jonathan Harris, Copyright \xA9 2015 TattooWoo.com\n\n\nConcept Art/Sketches
+    by Lin Pease\nCamera System adapted from design by David Bocek and David Perera\n\n\nThank
     you to all of our playtesters!"
 --- !u!222 &147869444
 CanvasRenderer:
