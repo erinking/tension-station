@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightMove : MonoBehaviour {
 
-	Plane plane = new Plane(Vector3.up, new Vector3(0,1,0));
+	Plane plane = new Plane(Vector3.up, new Vector3(0,2,0));
 
 	// Use this for initialization
 	void Start () {
