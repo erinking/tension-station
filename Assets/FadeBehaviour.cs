@@ -25,7 +25,7 @@ public class FadeBehaviour : MonoBehaviour
 
 		if (alpha == 1)
 		{
-			SceneManager.LoadScene (1);
+			SceneManager.LoadScene ("Credits");
 		}
 	}
 	
