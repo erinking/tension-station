@@ -147,13 +147,13 @@ Material:
       second: 0
     - first:
         name: _Rotation2
-      second: 166
+      second: 220
     - first:
         name: _RotationPitch
       second: 0
     - first:
         name: _RotationPitch2
-      second: 45
+      second: -120
     - first:
         name: _SrcBlend
       second: 1
