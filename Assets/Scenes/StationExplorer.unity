@@ -2213,9 +2213,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11454396, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11454396, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e3ecbe4635c6a39449d5a171361f6710, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &251150126 stripped
@@ -8002,9 +8003,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11471830, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8295348, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11471830, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b6737ff1bfca1e543a488553978cd1ad, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &828334464
@@ -9550,7 +9556,7 @@ Prefab:
     - target: {fileID: 114000011424036624, guid: eab10438a022d4c079533db9761304b8,
         type: 2}
       propertyPath: useController
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000014140544362, guid: eab10438a022d4c079533db9761304b8,
         type: 2}
