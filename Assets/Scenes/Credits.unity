@@ -286,8 +286,9 @@ MonoBehaviour:
     noise: https://freesound.org/people/duckduckpony/sounds/204030/\nfootsteps and
     ambience from Final Cut Pro sound effects library\n\nVolumetric lighting: github.com/SlightlyMad/VolumetricLights,
     Copyright (c) 2016, Michal Skalsky\n\ntrain schedule board font: \u201CCharcoal\u201D
-    by Jonathan Harris, Copyright \xA9 2015 TattooWoo.com\n\nCamera System adapted
-    from design by David Bocek and David Perera"
+    by Jonathan Harris, Copyright \xA9 2015 TattooWoo.com\n\nConcept Art/Sketches
+    by Lin Pease\nCamera System adapted from design by David Bocek and David Perera\n\nThank
+    you to all of our playtesters!"
 --- !u!222 &147869444
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -559,6 +560,7 @@ MonoBehaviour:
   mask: {fileID: 870246255}
   text: {fileID: 147869443}
   nextLevel: Menu
+  relativeFontSize: 0.03
 --- !u!1 &1855798795
 GameObject:
   m_ObjectHideFlags: 0
