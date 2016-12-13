@@ -25,6 +25,7 @@ public class FadeBehaviour : MonoBehaviour
 
 		if (alpha == 1)
 		{
+			gameObject.tag = "Camera";
 			SceneManager.LoadScene ("Credits");
 		}
 	}
